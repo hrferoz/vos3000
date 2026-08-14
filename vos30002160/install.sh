@@ -14,7 +14,7 @@ chkconfig mysql on
 chmod 644 /etc/my.cnf
 service mysql restart
 rpm -ivh jdk-6u45-linux-amd64.rpm
-tar zxvf apache-tomcat-7.0.23.tar.gz
+#tar zxvf apache-tomcat-7.0.23.tar.gz
 mv apache-tomcat-7.0.23 /home/kunshiweb/base/apache-tomcat
 tar -zxvf jrockit-jdk1.6.0_33-R28.2.4-4.1.0.tar.gz
 \cp -rf ./jrockit-jdk1.6.0_33-R28.2.4-4.1.0/ /home/kunshi/base/jdk_default

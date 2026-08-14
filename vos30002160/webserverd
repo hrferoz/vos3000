@@ -1,0 +1,190 @@
+#!/bin/sh
+#
+# chkconfig: 2345 72 18
+# description: kunshi webserver daemons \
+#	       Kunshi Technologies Co., Ltd.
+# action
+# Source function library.
+
+### BEGIN INIT INFO
+# Provides: vos3000webct
+# Required-Start: $network
+# Should-Start: vos3000d webdata
+# Required-Stop:
+# Default-Start: 2 3 4 5
+# Default-Stop: 0 1 6
+# Description: kunshi webserver daemon
+### END INIT INFO
+
+if [ -f /etc/init.d/functions ];then
+. /etc/init.d/functions
+fi
+if [ -f /etc/rc.status ];then
+. /etc/rc.status
+fi
+
+echo_success_system() {
+	if [ -f /etc/init.d/functions -a "$MOVE_TO_COL" != "" ];then		
+		echo -en "\e[0;39m"
+		echo_success
+		echo -e
+	elif [ -f /etc/rc.status ];then
+		 _rc_status=0
+		rc_status -v
+	else
+		echo -e "\\033[60G\e[32;40m[  OK  ]"
+	fi
+	echo -en "\e[0;39m"
+}
+echo_failed_system() {
+	if [ -f /etc/init.d/functions -a "$MOVE_TO_COL" != "" ];then
+		echo -en "\e[0;39m"
+		echo_failure
+		echo -e
+	elif [ -f /etc/rc.status ];then
+		_rc_status=1
+		rc_status -v
+	else
+		echo -e "\\033[60G\e[31;40m[FAILED]"
+	fi
+	echo -en "\e[0;39m"
+}
+
+JDK_ENV_FILE=/home/kunshiweb/.jdk_env
+. $JDK_ENV_FILE
+
+APPLOCKFILE=/var/lock/subsys/vos3000webct
+
+TOMCAT_HOME=/home/kunshiweb/base/apache-tomcat
+KEY_STORE_FILE="$TOMCAT_HOME/.keystore"
+TOMCAT_START=startup.sh
+TOMCAT_STOP=shutdown.sh
+STARTTIP="Starting kunshi webserver service:"
+STOPTIP="Shutting down kunshi webserver service:"
+TLS_KEY_TIP="Creating vos3000 web https keystore"
+
+APP_STOP=/home/kunshiweb/.run/webserver.stop
+
+create_keystore(){
+	MAIN_IP=`ifconfig |grep inet|head -n 1|cut -d':' -f 2|cut -d' ' -f 1`
+	echo -en $"\e[33;40m$TLS_KEY_TIP $MAIN_IP:"
+	$JAVA_HOME/bin/keytool -genkey -alias tomcat -keystore $KEY_STORE_FILE -keypass ks_web_pass -storepass ks_web_pass -keyalg RSA -validity 3650 -dname "cn=$MAIN_IP, ou=kunshi, l=kunshi, S=kunshi, o=kunshi, c=kunshi"
+	echo_success_system
+}
+
+enable80()
+{
+	# Make sure only root can run this script.
+	if [ $UID -ne 0 ] ; then 
+		echo "Only root can run this script"
+		exit 1
+	fi 
+	iptables -t nat -A PREROUTING -p tcp --dport 80 -j REDIRECT --to-port 8080
+	iptables -t nat -A PREROUTING -p tcp --dport 443 -j REDIRECT --to-port 8443
+}
+disable80()
+{
+	# Make sure only root can run this script.
+	if [ $UID -ne 0 ] ; then 
+		echo "Only root can run this script"
+		exit 1
+	fi
+	iptables -t nat -D PREROUTING -p tcp --dport 80 -j REDIRECT --to-port 8080 > /dev/null 2>&1
+	iptables -t nat -D PREROUTING -p tcp --dport 443 -j REDIRECT --to-port 8443 > /dev/null 2>&1
+}
+
+start() {
+	
+	echo -en $"\e[33;40m$STARTTIP"
+	export JAVA_OPTS="-Xmx1024m"
+	rm -rf $TOMCAT_HOME/logs/*
+	cd $TOMCAT_HOME/bin
+	if [ "$USER" = "kunshiweb" ];then
+		$TOMCAT_HOME/bin/$TOMCAT_START >/dev/null 2>&1 &
+	else		
+		su - kunshiweb -c "export JAVA_OPTS=-Xmx1024m;cd $TOMCAT_HOME/bin;$TOMCAT_HOME/bin/$TOMCAT_START >/dev/null 2>&1 &" 
+	fi
+	cd - >/dev/null 2>&1 &
+	if [ "$USER" != "kunshiweb" ];then
+		touch $APPLOCKFILE
+	fi
+	rm -rf $APP_STOP
+	echo_success_system
+}
+ 
+stop() {
+	echo -en $"\e[33;40m$STOPTIP"
+	echo -n > $APP_STOP > /dev/null 2>&1
+	if [ "$USER" != "kunshi" ];then
+		/bin/chown kunshiweb:kunshiweb $APP_STOP> /dev/null 2>&1
+	fi
+	
+	cd $TOMCAT_HOME/bin
+	$TOMCAT_HOME/bin/$TOMCAT_STOP >/dev/null 2>&1 &
+	cd - >/dev/null 2>&1 &
+	sleep 1
+	TOMCATPID=`ps auxww|grep $TOMCAT_HOME/bin/bootstrap.jar|grep -v grep|awk '{print $2}'`
+	[ -n "$TOMCATPID" ] && { kill -9 $TOMCATPID;}
+	if [ "$USER" != "kunshiweb" ];then
+		rm -rf $APPLOCKFILE
+		/etc/init.d/iptables status > /dev/null 2>&1
+		[ "$?" = "0" ] && {	disable80;}
+	fi
+	echo_success_system
+}	
+
+restart() {
+	stop
+	start
+}
+
+genkey() {
+	rm -rf "$KEY_STORE_FILE"
+	create_keystore
+	stop
+	start
+}	
+
+status() {
+	PID=`ps auxww|grep $TOMCAT_HOME/bin/bootstrap.jar|grep -v grep|awk '{print $2}'`
+	if [ -n "$PID" ]; then
+		echo "Process is running. Pid: $PID"
+		exit 0
+	fi
+	if [ -f $APP_STOP ];then
+		echo "Process stopped manually"
+		exit 0
+	fi
+	echo "Process does not exist."
+	exit 3
+}
+	
+
+case "$1" in
+	start)
+		start
+	;;
+	stop)
+		stop
+	;;
+	status)
+		status
+	;;
+	restart)
+		restart
+	;;
+	enable80)
+		enable80
+	;;
+	disable80)
+		disable80
+	;;
+	genkey)
+		genkey
+	;;
+	*)
+	echo $"Usage: $0 {start|stop|status|restart|genkey|enable80|disable80}"
+	exit 1
+esac
+
+exit $?

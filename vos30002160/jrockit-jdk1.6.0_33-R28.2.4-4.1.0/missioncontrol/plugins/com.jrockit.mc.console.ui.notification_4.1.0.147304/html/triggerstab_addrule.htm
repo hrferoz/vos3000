@@ -1,0 +1,284 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=us-ascii" />
+<meta http-equiv="Content-Style-Type" content="text/css" />
+<meta http-equiv="Content-Script-Type" content="text/javascript" />
+<title>Adding a New Trigger Rule Using the Add Wizard</title>
+<meta name="generator" content="Oracle DARB XHTML Converter (Mode = ohj/ohw) - Version 1.0.3" />
+<meta name="date" content="2011-08-03T10:15:12Z" />
+<meta name="robots" content="noarchive" />
+<meta name="doctitle" content="Adding a New Trigger Rule Using the Add Wizard" />
+<meta name="relnum" content="Release 4.1" />
+<meta name="partnum" content="E21585-01" />
+<meta name="topic-id" content="NOTFY102" />
+<link rel="copyright" href="./dcommon/html/cpyr.htm" title="Copyright" type="text/html" />
+<link rel="stylesheet" href="./dcommon/css/blafdoc.css" title="Oracle BLAFDoc" type="text/css" />
+<link rel="contents" href="toc.htm" title="Contents" type="text/html" />
+<link rel="prev" href="triggerstab_getfamiliar.htm" title="Previous" type="text/html" />
+<link rel="next" href="triggerstab_activate.htm" title="Next" type="text/html" />
+</head>
+<body>
+<div class="zz-skip-header"><a href="#BEGIN">Skip Headers</a></div>
+<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100%">
+<col width="86%" />
+<col width="*" />
+<tr valign="bottom">
+<td align="left"></td>
+<td align="center"><a href="triggerstab_getfamiliar.htm"><img src="./dcommon/gifs/leftnav.gif" alt="Previous" /><br />
+<span class="icon">Previous</span></a>&nbsp;</td>
+<td align="center"><a href="triggerstab_activate.htm"><img src="./dcommon/gifs/rightnav.gif" alt="Next" /><br />
+<span class="icon">Next</span></a></td>
+</tr>
+</table>
+<p><a id="i1000222" name="i1000222"></a><a id="NOTFY102" name="NOTFY102"></a></p>
+<div class="sect1">
+<h1>Adding a New Trigger Rule Using the Add Wizard</h1>
+<a name="BEGIN" id="BEGIN"></a>
+<p>After a new trigger rule is added, you can activate or deactivate it for the running application, as described in <a href="triggerstab_activate.htm#i999873">"Activating and Deactivating a Rule"</a>. To create a trigger rule, you must at least complete Step 1 though Step 3 in the following procedure.</p>
+<p><span class="bold">To add a new trigger rule by using the Add wizard</span>:</p>
+<ol>
+<li>
+<p>Click the Triggers tab.</p>
+</li>
+<li>
+<p>Click <span class="gui-object-action">Add</span>.</p>
+<p>The Add New Rule&mdash;Select attribute subscription trigger dialog box appears.</p>
+</li>
+<li>
+<p>Drill down to locate the attribute on which you want to trigger.</p>
+</li>
+<li>
+<p>Click <span class="gui-object-action">Next</span>.</p>
+<p>The Add New Trigger Rule&mdash;Set condition for triggering dialog box appears.</p>
+<p>In this dialog box, set the properties that define when the rule will be triggered; for example, the threshold at which the rule is invoked and for how long the triggering condition should be sustained before invoking the trigger action.</p>
+</li>
+<li>
+<p>Fill in the fields as described in <a href="#CHDJJHJG">Table: Set Condition for Triggering Field Descriptions</a>.</p>
+<div class="tblformal"><a id="sthref1" name="sthref1"></a><a id="CHDJJHJG" name="CHDJJHJG"></a>
+<p class="titleintable">Set Condition for Triggering Field Descriptions</p>
+<table class="Formal" title="Set Condition for Triggering Field Descriptions" summary="Table 1 is a two-column procedure table. The left column lists the field names while the right column indicates what data to enter in the field." dir="ltr" border="1" width="100%" frame="hsides" rules="groups" cellpadding="3" cellspacing="0">
+<col width="33%" />
+<col width="*" />
+<thead>
+<tr align="left" valign="top">
+<th align="left" valign="bottom" id="r1c1-t2">In this field</th>
+<th align="left" valign="bottom" id="r1c2-t2">Enter</th>
+</tr>
+</thead>
+<tbody>
+<tr align="left" valign="top">
+<td align="left" id="r2c1-t2" headers="r1c1-t2">
+<p>Max trigger value</p>
+</td>
+<td align="left" headers="r2c1-t2 r1c2-t2">
+<p>The maximum value for the selected attribute at which point the rule should be triggered.</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r3c1-t2" headers="r1c1-t2">
+<p>Sustained (s)</p>
+</td>
+<td align="left" headers="r3c1-t2 r1c2-t2">
+<p>The duration, in seconds (s), that the triggering condition must be met for the action to be triggered.</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r4c1-t2" headers="r1c1-t2">
+<p>Limit period (s)</p>
+</td>
+<td align="left" headers="r4c1-t2 r1c2-t2">
+<p>The minimum time, in seconds (s), between consecutive triggers.</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r5c1-t2" headers="r1c1-t2">
+<p>Trigger on descending flank (checkbox)</p>
+</td>
+<td align="left" headers="r5c1-t2 r1c2-t2">
+<p>Whether or not you want the action to be triggered when the attribute reaches the trigger value from a higher value; for example, if the trigger value is 80 and the attribute value descends from 100 to 80, the notification will be triggered.</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r6c1-t2" headers="r1c1-t2">
+<p>Trigger on ascending flank (checkbox)</p>
+</td>
+<td align="left" headers="r6c1-t2 r1c2-t2">
+<p>Whether or not you want the action to be triggered when the attribute reaches the trigger value from a lower value; for example, if the trigger value is 80 and th attribute value ascends from 60 to 80, the notification will be triggered.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="tblformal" --></li>
+<li>
+<p>Click <span class="gui-object-action">Next</span>.</p>
+<p>The Add New Trigger Rule&mdash;Select Action dialog box appears.</p>
+<p>Use this dialog box to identify the type of action you want to occur when a notification is sent. You have a choice of five options:</p>
+<ul>
+<li>
+<p>Send an alert to the application.</p>
+</li>
+<li>
+<p>Send a warning to standard output.</p>
+</li>
+<li>
+<p>Dump a flight recording.</p>
+</li>
+<li>
+<p>Invoke a diagnostic command.</p>
+</li>
+<li>
+<p>Send an e-mail to a specific recipient.</p>
+</li>
+<li>
+<p>Start a JRA recording.</p>
+</li>
+<li>
+<p>Create a thread stack dump.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Select the action you want performed. Depending on the action you select, you might have to enter additional data, as described in <a href="#CHDEBDDB">Table: Selecting a Notification Action</a>.</p>
+<div class="tblformal"><a id="sthref2" name="sthref2"></a><a id="CHDEBDDB" name="CHDEBDDB"></a>
+<p class="titleintable">Selecting a Notification Action</p>
+<table class="Formal" title="Selecting a Notification Action" summary="Table 2 is a two-column decision table that instructs how to select a notification action. The left column lists the types of notification actions. The right column describes what the associated action causes to happen." dir="ltr" border="1" width="100%" frame="hsides" rules="groups" cellpadding="3" cellspacing="0">
+<col width="33%" />
+<col width="*" />
+<thead>
+<tr align="left" valign="top">
+<th align="left" valign="bottom" id="r1c1-t3">Select</th>
+<th align="left" valign="bottom" id="r1c2-t3">To</th>
+</tr>
+</thead>
+<tbody>
+<tr align="left" valign="top">
+<td align="left" id="r2c1-t3" headers="r1c1-t3">
+<p>Application alert</p>
+</td>
+<td align="left" headers="r2c1-t3 r1c2-t3">
+<p>Print a notification in <span class="bold">the Trigger Alerts dialog box</span>. See<a href="notfy001.htm#FHJBCBHI">"Viewing Application Alerts"</a> for an example of this kind of action.</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r3c1-t3" headers="r1c1-t3">
+<p>Console output</p>
+</td>
+<td align="left" headers="r3c1-t3 r1c2-t3">
+<p>Print a notification on the console (<code>system.out</code>).</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r4c1-t3" headers="r1c1-t3">
+<p>Dump Flight Recording</p>
+</td>
+<td align="left" headers="r4c1-t3 r1c2-t3">
+<p>Create afile showing system activity leading up to the alert.</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r5c1-t3" headers="r1c1-t3">
+<p>Invoke Diagnostic Command</p>
+</td>
+<td align="left" headers="r5c1-t3 r1c2-t3">
+<p>Run a diagnostic command on the JVM.</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r6c1-t3" headers="r1c1-t3">
+<p>Start JRA Recording</p>
+</td>
+<td align="left" headers="r6c1-t3 r1c2-t3">
+<p>Starts a JRockit Runtime Analyzer reccording on the VM that triggered the rule. This option only works with Oracle JRockit versions prior to R28.0.0.</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r7c1-t3" headers="r1c1-t3">
+<p>Send e-mail</p>
+</td>
+<td align="left" headers="r7c1-t3 r1c2-t3">
+<p>Send an e-mail to a specified user. If you select this option, you must enter the following data in the fields that appear:</p>
+<ul>
+<li>
+<p><span class="bold">To</span> (the e-mail recipient).</p>
+</li>
+<li>
+<p><span class="bold">CC</span> (anyone&mdash;aside from the recipient&mdash;to whom you want to send a copy of the e-mail).</p>
+</li>
+<li>
+<p><span class="bold">BCC</span> (anyone&mdash;aside from the recipient&mdash;to whom you want to send a blind copy of the e-mail)</p>
+</li>
+</ul>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r8c1-t3" headers="r1c1-t3">
+<p>Thread stack dump</p>
+</td>
+<td align="left" headers="r8c1-t3 r1c2-t3">
+<p>Create a thread stack dump and log it to a file or display it as an application alert. If you select this option, you must enter the following data in the fields that appear:</p>
+<ul>
+<li>
+<p>The output method (system alert or log to file).</p>
+</li>
+<li>
+<p>If you select log to file, the name of the file to which you want the dump written.</p>
+</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="tblformal" --></li>
+<li>
+<p>Click <span class="gui-object-action">Next</span>.</p>
+<p>The Add New Trigger Rule&mdash;Select constraints dialog box appears.</p>
+<p>This is an optional step that allows you to limit when an action is triggered; for example, you might want your action to trigger only every other day of the week or during specific hours. If you do not want to set a constraint, skip Step 9 and go on to Step 10.</p>
+</li>
+<li>
+<p>Select the constraints you want applied to the trigger rule.</p>
+<ul>
+<li>
+<p><span class="bold">Date span</span> sets a range of dates.</p>
+</li>
+<li>
+<p><span class="bold">Day of week</span> sets which days of the week you want your action to trigger. If you select this option, you must also specify which days you want your action to trigger.</p>
+</li>
+<li>
+<p><span class="bold">Time span</span> sets the time period.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Click <span class="gui-object-action">Next</span>.</p>
+<p>The Add New Trigger Rule&mdash;Name your rule dialog box appears.</p>
+</li>
+<li>
+<p>Enter a name for your new rule and click <span class="gui-object-action">Finish</span>.</p>
+<p>The new rule appears on the Trigger Rules list.</p>
+<p>Your next step is to activate the rule, as described in <a href="triggerstab_activate.htm#i999873">"Activating and Deactivating a Rule"</a>.</p>
+</li>
+</ol>
+</div>
+<!-- class="sect1" -->
+<!-- Start Footer -->
+<div class="footer">
+<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100%">
+<col width="86%" />
+<col width="*" />
+<tr>
+<td align="left"><span class="copyrightlogo">Copyright&nbsp;&copy;&nbsp;2001, 2011,&nbsp;Oracle&nbsp;and/or&nbsp;its&nbsp;affiliates.&nbsp;All&nbsp;rights&nbsp;reserved.</span><br />
+<a href="./dcommon/html/cpyr.htm"><span class="copyrightlogo">Legal Notices</span></a></td>
+<td align="center"><a href="triggerstab_getfamiliar.htm"><img src="./dcommon/gifs/leftnav.gif" alt="Previous" /><br />
+<span class="icon">Previous</span></a>&nbsp;</td>
+<td align="center"><a href="triggerstab_activate.htm"><img src="./dcommon/gifs/rightnav.gif" alt="Next" /><br />
+<span class="icon">Next</span></a></td>
+</tr>
+</table>
+</div>
+<!-- class="footer" -->
+</body>
+</html>

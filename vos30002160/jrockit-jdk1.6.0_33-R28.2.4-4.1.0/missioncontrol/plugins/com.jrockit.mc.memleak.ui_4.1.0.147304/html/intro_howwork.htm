@@ -1,0 +1,60 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=us-ascii" />
+<meta http-equiv="Content-Style-Type" content="text/css" />
+<meta http-equiv="Content-Script-Type" content="text/javascript" />
+<title>How Does the Memory Leak Detector Work?</title>
+<meta name="generator" content="Oracle DARB XHTML Converter (Mode = ohj/ohw) - Version 1.0.3" />
+<meta name="date" content="2011-07-13T23:47:57Z" />
+<meta name="robots" content="noarchive" />
+<meta name="doctitle" content="How Does the Memory Leak Detector Work?" />
+<meta name="relnum" content="Release 4.1" />
+<meta name="partnum" content="E21557-01" />
+<meta name="topic-id" content="MEMLK102" />
+<link rel="copyright" href="./dcommon/html/cpyr.htm" title="Copyright" type="text/html" />
+<link rel="stylesheet" href="./dcommon/css/blafdoc.css" title="Oracle BLAFDoc" type="text/css" />
+<link rel="contents" href="toc.htm" title="Contents" type="text/html" />
+<link rel="prev" href="intro_whatis.htm" title="Previous" type="text/html" />
+<link rel="next" href="about001.htm" title="Next" type="text/html" />
+</head>
+<body>
+<div class="zz-skip-header"><a href="#BEGIN">Skip Headers</a></div>
+<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100%">
+<col width="86%" />
+<col width="*" />
+<tr valign="bottom">
+<td align="left"></td>
+<td align="center"><a href="intro_whatis.htm"><img src="./dcommon/gifs/leftnav.gif" alt="Previous" /><br />
+<span class="icon">Previous</span></a>&nbsp;</td>
+<td align="center"><a href="about001.htm"><img src="./dcommon/gifs/rightnav.gif" alt="Next" /><br />
+<span class="icon">Next</span></a></td>
+</tr>
+</table>
+<p><a id="i1074966" name="i1074966"></a><a id="MEMLK102" name="MEMLK102"></a></p>
+<div class="sect1">
+<h1>How Does the Memory Leak Detector Work?</h1>
+<a name="BEGIN" id="BEGIN"></a>
+<p>The Memory Leak Detector gets information on object liveness and relations from the running JVM when this data is gathered for garbage collection purposes. The Memory Leak Detector continuously analyzes this data and displays it as statistics, object relations graphs and instance information.</p>
+<p>The Memory Leak Detector does not change the Java application or byte code. The garbage collector in the JRockit JVM gathers object liveness and object relations data as a part of the ordinary garbage collection process. Thus the Memory Leak Detector adds very little performance overhead to the running Java application, and as soon as you disconnect the Memory Leak Detector, the application continues to run at full speed again.</p>
+</div>
+<!-- class="sect1" -->
+<!-- Start Footer -->
+<div class="footer">
+<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100%">
+<col width="86%" />
+<col width="*" />
+<tr>
+<td align="left"><span class="copyrightlogo">Copyright&nbsp;&copy;&nbsp;2001, 2011,&nbsp;Oracle&nbsp;and/or&nbsp;its&nbsp;affiliates.&nbsp;All&nbsp;rights&nbsp;reserved.</span><br />
+<a href="./dcommon/html/cpyr.htm"><span class="copyrightlogo">Legal Notices</span></a></td>
+<td align="center"><a href="intro_whatis.htm"><img src="./dcommon/gifs/leftnav.gif" alt="Previous" /><br />
+<span class="icon">Previous</span></a>&nbsp;</td>
+<td align="center"><a href="about001.htm"><img src="./dcommon/gifs/rightnav.gif" alt="Next" /><br />
+<span class="icon">Next</span></a></td>
+</tr>
+</table>
+</div>
+<!-- class="footer" -->
+</body>
+</html>

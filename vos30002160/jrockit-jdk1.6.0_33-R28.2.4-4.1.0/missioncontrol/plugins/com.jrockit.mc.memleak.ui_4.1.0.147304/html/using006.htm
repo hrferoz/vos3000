@@ -1,0 +1,76 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=us-ascii" />
+<meta http-equiv="Content-Style-Type" content="text/css" />
+<meta http-equiv="Content-Script-Type" content="text/javascript" />
+<title>Filtering Types</title>
+<meta name="generator" content="Oracle DARB XHTML Converter (Mode = ohj/ohw) - Version 1.0.3" />
+<meta name="date" content="2011-07-13T23:48:0Z" />
+<meta name="robots" content="noarchive" />
+<meta name="doctitle" content="Filtering Types" />
+<meta name="relnum" content="Release 4.1" />
+<meta name="partnum" content="E21557-01" />
+<link rel="copyright" href="./dcommon/html/cpyr.htm" title="Copyright" type="text/html" />
+<link rel="stylesheet" href="./dcommon/css/blafdoc.css" title="Oracle BLAFDoc" type="text/css" />
+<link rel="contents" href="toc.htm" title="Contents" type="text/html" />
+<link rel="prev" href="using005.htm" title="Previous" type="text/html" />
+<link rel="next" href="using007.htm" title="Next" type="text/html" />
+</head>
+<body>
+<div class="zz-skip-header"><a href="#BEGIN">Skip Headers</a></div>
+<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100%">
+<col width="86%" />
+<col width="*" />
+<tr valign="bottom">
+<td align="left"></td>
+<td align="center"><a href="using005.htm"><img src="./dcommon/gifs/leftnav.gif" alt="Previous" /><br />
+<span class="icon">Previous</span></a>&nbsp;</td>
+<td align="center"><a href="using007.htm"><img src="./dcommon/gifs/rightnav.gif" alt="Next" /><br />
+<span class="icon">Next</span></a></td>
+</tr>
+</table>
+<p><a id="BCGCEFDE" name="BCGCEFDE"></a></p>
+<div class="sect3">
+<h1>Filtering Types</h1>
+<a name="BEGIN" id="BEGIN"></a>
+<p>The Trend tab has a filtering mechanism that allows you narrow the types displayed by specifying a column and a value in that column by which to filter the results. This is helpful if you want to limit the results, for example, to just those types of a specific name.</p>
+<p><span class="bold">To filter Types:</span></p>
+<ol>
+<li>
+<p>Right-click the Filter Column to open its menu and select the column you want to filter on, for example, Type.</p>
+<p>The column name appears in the Filter Column field.</p>
+</li>
+<li>
+<p>In the adjacent text box, enter the string for which you want to filter.</p>
+<p>Normally, to lessen the impact on performance, matching is done using only simple Kleene star wildcards. A star (<code>*</code>) will match zero or more occurrences of anything; for example:</p>
+<p><code>8*</code> will match anything beginning with 8. <code>*es</code> will match anything ending with es.</p>
+<p>You can also match using regular expressions; however, resolution can take much longer with complex expressions and large amounts of data; for example:</p>
+<p><code>regexp:(YC|Young Collect).*</code> will match anything starting with YC or Young Collect, such as YC Promotion Failed, Young Collection and Young Collector Nursery Snapshot.</p>
+<p>For more information on regular expressions, see <code><a href="http://download.oracle.com/javase/tutorial/essential/regex/">http://download.oracle.com/javase/tutorial/essential/regex/</a></code>.</p>
+<p>You can also build logical expressions for columns with numerical values. For instance, for a column with counts, such as the one in Memory/allocation Allocation by Class table, the expression &gt; 100 &amp;&amp; &lt; 500 will filter out the classes with more than 100 but less than 500 events.</p>
+<p>The filter text entry field is case sensitive.</p>
+</li>
+</ol>
+</div>
+<!-- class="sect3" -->
+<!-- class="sect2" -->
+<!-- Start Footer -->
+<div class="footer">
+<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100%">
+<col width="86%" />
+<col width="*" />
+<tr>
+<td align="left"><span class="copyrightlogo">Copyright&nbsp;&copy;&nbsp;2001, 2011,&nbsp;Oracle&nbsp;and/or&nbsp;its&nbsp;affiliates.&nbsp;All&nbsp;rights&nbsp;reserved.</span><br />
+<a href="./dcommon/html/cpyr.htm"><span class="copyrightlogo">Legal Notices</span></a></td>
+<td align="center"><a href="using005.htm"><img src="./dcommon/gifs/leftnav.gif" alt="Previous" /><br />
+<span class="icon">Previous</span></a>&nbsp;</td>
+<td align="center"><a href="using007.htm"><img src="./dcommon/gifs/rightnav.gif" alt="Next" /><br />
+<span class="icon">Next</span></a></td>
+</tr>
+</table>
+</div>
+<!-- class="footer" -->
+</body>
+</html>

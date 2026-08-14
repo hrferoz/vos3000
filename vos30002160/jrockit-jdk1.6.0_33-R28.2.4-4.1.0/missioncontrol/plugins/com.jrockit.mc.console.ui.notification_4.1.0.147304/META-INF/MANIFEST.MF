@@ -1,0 +1,27 @@
+Manifest-Version: 1.0
+Ant-Version: Apache Ant 1.8.2
+Created-By: 1.6.0_20-b02 (Sun Microsystems Inc.)
+Export-Package: com.jrockit.mc.console.ui.notification,com.jrockit.mc.
+ console.ui.notification.tab,com.jrockit.mc.console.ui.notification.ui
+ components,com.jrockit.mc.console.ui.notification.widget,com.jrockit.
+ mc.console.ui.notification.wizard
+Bundle-ActivationPolicy: lazy
+Bundle-ClassPath: notification_plugin.jar
+Bundle-Name: Console Notification Plug-in
+Bundle-Localization: plugin
+Bundle-RequiredExecutionEnvironment: J2SE-1.5
+Require-Bundle: com.jrockit.mc.core;bundle-version="[4.1.0,5.0.0)",com
+ .jrockit.mc.ui;bundle-version="[4.1.0,5.0.0)",com.jrockit.mc.console.
+ ui;bundle-version="[4.1.0,5.0.0)",org.eclipse.ui;bundle-version="[3.7
+ .0,4.0.0)",org.eclipse.core.runtime;bundle-version="[3.7.0,4.0.0)",or
+ g.eclipse.ui.forms;bundle-version="[3.5.0,4.0.0)",com.jrockit.mc.rjmx
+ .core;visibility:="reexport";bundle-version="[4.1.0,5.0.0)",com.jrock
+ it.mc.rjmx.ui;bundle-version="4.1.0"
+Bundle-Vendor: Oracle
+Bundle-Version: 4.1.0.147304
+Bundle-ManifestVersion: 2
+Bundle-Activator: com.jrockit.mc.console.ui.notification.NotificationP
+ lugin
+Bundle-SymbolicName: com.jrockit.mc.console.ui.notification; singleton
+ :=true
+

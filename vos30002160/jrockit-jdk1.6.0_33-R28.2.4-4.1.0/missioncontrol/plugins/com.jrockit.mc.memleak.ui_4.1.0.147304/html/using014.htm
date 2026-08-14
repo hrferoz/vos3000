@@ -1,0 +1,143 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=us-ascii" />
+<meta http-equiv="Content-Style-Type" content="text/css" />
+<meta http-equiv="Content-Script-Type" content="text/javascript" />
+<title>Finding the Garbage Collection Root</title>
+<meta name="generator" content="Oracle DARB XHTML Converter (Mode = ohj/ohw) - Version 1.0.3" />
+<meta name="date" content="2011-07-13T23:48:0Z" />
+<meta name="robots" content="noarchive" />
+<meta name="doctitle" content="Finding the Garbage Collection Root" />
+<meta name="relnum" content="Release 4.1" />
+<meta name="partnum" content="E21557-01" />
+<meta name="topic-id" content="memleak_pathtoroot" />
+<link rel="copyright" href="./dcommon/html/cpyr.htm" title="Copyright" type="text/html" />
+<link rel="stylesheet" href="./dcommon/css/blafdoc.css" title="Oracle BLAFDoc" type="text/css" />
+<link rel="contents" href="toc.htm" title="Contents" type="text/html" />
+<link rel="prev" href="using013.htm" title="Previous" type="text/html" />
+<link rel="next" href="using015.htm" title="Next" type="text/html" />
+</head>
+<body>
+<div class="zz-skip-header"><a href="#BEGIN">Skip Headers</a></div>
+<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100%">
+<col width="86%" />
+<col width="*" />
+<tr valign="bottom">
+<td align="left"></td>
+<td align="center"><a href="using013.htm"><img src="./dcommon/gifs/leftnav.gif" alt="Previous" /><br />
+<span class="icon">Previous</span></a>&nbsp;</td>
+<td align="center"><a href="using015.htm"><img src="./dcommon/gifs/rightnav.gif" alt="Next" /><br />
+<span class="icon">Next</span></a></td>
+</tr>
+</table>
+<p><a id="BDHEDGHB" name="BDHEDGHB"></a><a id="memleak_pathtoroot" name="memleak_pathtoroot"></a></p>
+<div class="sect2">
+<h1>Finding the Garbage Collection Root</h1>
+<a name="BEGIN" id="BEGIN"></a>
+<p>You can see all referring nodes for an instance by expanding nodes one at a time or automatically expand the shortest path to a garbage collection root. <a href="#BDHBJEHD">Table: Locating a Suspected Reference</a> describes ways to locate the garbage collection root.</p>
+<div class="tblhruleformal"><a id="sthref16" name="sthref16"></a><a id="BDHBJEHD" name="BDHBJEHD"></a>
+<p class="titleintable">Locating a Suspected Reference</p>
+<table class="HRuleFormal" title="Locating a Suspected Reference" summary="This is a two-cloumn decision table, The left-hand column describes possible outcomes for an action. The right-hand column describes the action to take to achieve the associated outcome" dir="ltr" border="1" width="100%" frame="hsides" rules="rows" cellpadding="3" cellspacing="0">
+<col width="39%" />
+<col width="*" />
+<thead>
+<tr align="left" valign="top">
+<th align="left" valign="bottom" id="r1c1-t7">To...</th>
+<th align="left" valign="bottom" id="r1c2-t7">Do this...</th>
+</tr>
+</thead>
+<tbody>
+<tr align="left" valign="top">
+<td align="left" id="r2c1-t7" headers="r1c1-t7">
+<p>Automatically expand the shortest path to a garbage collection root (recommended)</p>
+</td>
+<td align="left" headers="r2c1-t7 r1c2-t7">
+<ol>
+<li>
+<p>Right-click the darkest-colored node.</p>
+<p>A context menu appears.</p>
+</li>
+<li>
+<p>Select <span class="bold">Expand to Root</span>.</p>
+<p>The node expands to reveal at least one path to a garbage collection root.</p>
+</li>
+</ol>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r3c1-t7" headers="r1c1-t7">
+<p>Display referring nodes a few at time</p>
+</td>
+<td align="left" headers="r3c1-t7 r1c2-t7">
+<ol>
+<li>
+<p>Locate the darkest-colored node.</p>
+</li>
+<li>
+<p>Click the plus sign at the left end of that node.</p>
+<p>A few nodes referring to that one will appear. The number of nodes that appear is configurable from the Preferences dialog box.</p>
+</li>
+<li>
+<p>Continue clicking the plus signs in the darkest colored nodes as they appear.</p>
+</li>
+</ol>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r4c1-t7" headers="r1c1-t7">
+<p>Display all referring nodes at once</p>
+</td>
+<td align="left" headers="r4c1-t7 r1c2-t7">
+<ol>
+<li>
+<p>Right-click the darkest-colored node to open a context menu..</p>
+</li>
+<li>
+<p>Select <span class="bold">Expand All Nodes</span>.</p>
+<p>The node expands to show all referring nodes.</p>
+</li>
+</ol>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r5c1-t7" headers="r1c1-t7">
+<p>Display all referring nodes for a random instance on the Trend tab</p>
+</td>
+<td align="left" headers="r5c1-t7 r1c2-t7">
+<ol>
+<li>
+<p>On the Trend tab, right-click the type for which you want to display nodes.</p>
+<p>A context menu appears.</p>
+</li>
+<li>
+<p>Select <span class="gui-object-action">With Random Instance</span> then <span class="gui-object-action">Expand to Root</span>.</p>
+<p>The Instance relations tab appears, showing the type, expanded to its root.</p>
+</li>
+</ol>
+</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="tblhruleformal" --></div>
+<!-- class="sect2" -->
+<!-- Start Footer -->
+<div class="footer">
+<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100%">
+<col width="86%" />
+<col width="*" />
+<tr>
+<td align="left"><span class="copyrightlogo">Copyright&nbsp;&copy;&nbsp;2001, 2011,&nbsp;Oracle&nbsp;and/or&nbsp;its&nbsp;affiliates.&nbsp;All&nbsp;rights&nbsp;reserved.</span><br />
+<a href="./dcommon/html/cpyr.htm"><span class="copyrightlogo">Legal Notices</span></a></td>
+<td align="center"><a href="using013.htm"><img src="./dcommon/gifs/leftnav.gif" alt="Previous" /><br />
+<span class="icon">Previous</span></a>&nbsp;</td>
+<td align="center"><a href="using015.htm"><img src="./dcommon/gifs/rightnav.gif" alt="Next" /><br />
+<span class="icon">Next</span></a></td>
+</tr>
+</table>
+</div>
+<!-- class="footer" -->
+</body>
+</html>

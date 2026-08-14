@@ -1,0 +1,73 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?NLS TYPE="org.eclipse.help.toc"?>
+<toc label="The Memory Leak Detector" link_to="PLUGINS_ROOT/com.jrockit.mc.docs/toc.xml#MissionControlTOCLink">
+  <topic href="html/title.htm" label="Using the Oracle JRockit Memory Leak Detector">
+  <topic href="html/preface.htm" label="Preface">
+    <topic href="html/preface.htm#sthref3" label="Documentation Accessibility" />
+    <topic href="html/preface.htm#sthref7" label="Conventions" />
+    </topic>
+  <topic href="html/intro.htm" label="Using the Oracle JRockit Memory Leak Detector" />
+  <topic href="html/about.htm" label="Introduction to the Memory Leak Detector">
+      <topic href="html/intro_whatis.htm#i1074958" label="Introduction to the Memory Leak Detector" />
+      <topic href="html/intro_howwork.htm#i1074966" label="How Does the Memory Leak Detector Work?" />
+    <topic href="html/about001.htm#BABCIFBA" label="New Features and Updates in this Release">
+      <topic href="html/about002.htm#BABDDACG" label="Extension Point for Instance Visualization" />
+      <topic href="html/about003.htm#BABJEJIA" label="Shortest Path to an Instance's Garbage Collection Root" />
+      <topic href="html/about004.htm#BABIHFHA" label="New Class Loader Context Menu" />
+      <topic href="html/about005.htm#BABFCEDH" label="Graph and Type Representation are Now Combined" />
+      <topic href="html/about006.htm#BABBEHDF" label="New, Resettable Instance and Growth Counters" />
+      </topic>
+    </topic>
+    <topic href="html/getting_started.htm" label="Getting Started">
+      <topic href="html/gettingstart_spotting.htm#i1072698" label="Spotting a Suspected Memory Leak">
+        <topic href="html/getting_started001.htm#i1073517" label="Studying Heap Usage in Verbose Outputs" />
+        <topic href="html/getting_started002.htm#i1072886" label="Studying Heap Usage in the Management Console" />
+        <topic href="html/getting_started003.htm#i1072922" label="Studying Heap Usage in a JRockit Flight Recording" />
+      </topic>
+      <topic href="html/gettingstart_process.htm#i1073351" label="Detection Process Used with the Memory Leak Detector">
+        <topic href="html/getting_started004.htm#i1073390" label="Starting the Memory Leak Detector" />
+        <topic href="html/getting_started005.htm#i1073382" label="Trend Analysis" />
+        <topic href="html/getting_started006.htm#i1072757" label="Type Relations Study" />
+        <topic href="html/getting_started007.htm#i1072758" label="Instance Investigation" />
+      </topic>
+    </topic>
+    <topic href="html/using.htm" label="Using the Memory Leak Detector">
+      <topic href="html/using_getfamiliar.htm#e1072933" label="Getting Familiar with the Memory Leak Detector">
+        <topic href="html/using001.htm#i1072950" label="Memory Leak Detector Tool Bar" />
+        <topic href="html/using002.htm#i1073033" label="Memory Leak Detector Tabs" />
+      </topic>
+      <topic href="html/using_trendanalysis.htm#i1070111" label="Analyzing Live Set Trends">
+        <topic href="html/using003.htm#BCGBJFDD" label="Customizing the Trend Tab">
+          <topic href="html/using004.htm#BCGHDIGG" label="Adding and Removing Columns" />
+          <topic href="html/using005.htm#BCGDJBCB" label="Changing the Sort Order and Sort Key" />
+          <topic href="html/using006.htm#BCGCEFDE" label="Filtering Types" />
+        </topic>
+        <topic href="html/using007.htm#BDHIFHGJ" label="Trend Analysis Procedures" />
+        <topic href="html/using008.htm#BDHFEJFJ" label="Detecting Leaks from the Trend Tab When Two or More Classes Have the Same Name" />
+        <topic href="html/using009.htm#sthref5" label="To Jump to Application Source Code" />
+      </topic>
+      <topic href="html/using_references.htm#i1070947" label="Investigating Type References">
+        <topic href="html/using010.htm#BDHHJDBG" label="Starting the Investigation" />
+        <topic href="html/using011.htm#BDHFDGCH" label="Looking at Multiple Classes with the Same Name" />
+        <topic href="html/using012.htm#BDHDFIEB" label="Studying Type References" />
+      </topic>
+      <topic href="html/using_instance.htm#i1070855" label="Investigating an Instance">
+        <topic href="html/using013.htm#BDHIDFGE" label="Displaying Instances" />
+        <topic href="html/using014.htm#BDHEDGHB" label="Finding the Garbage Collection Root" />
+        <topic href="html/using015.htm#BDHCGCJH" label="Removing Instances from the Instance Relations Tab" />
+      </topic>
+      <topic href="html/using016.htm#sthref17" label="Viewing Complex Graphs" />
+      <topic href="html/using_stacktrace.htm#i1070860" label="Viewing Allocation Stack Traces" />
+      <topic href="html/using017.htm#BDHJDJIC" label="Using the Instance List">
+        <topic href="html/using018.htm#BDHBDCDJ" label="Understanding the Instance List" />
+        <topic href="html/using019.htm#BDHJAFEE" label="Opening the Instance List" />
+        <topic href="html/using020.htm#BDHDFBBG" label="Working with the Instance List" />
+        <topic href="html/using021.htm#sthref20" label="Configuring the Instance List" />
+      </topic>
+      <topic href="html/using_jumptosource.htm#i1075148" label="Jumping to Application Source" />
+      <topic href="html/using_customizing.htm#i1072445" label="Customizing Settings">
+        <topic href="html/using022.htm#sthref21" label="Customization Procedures" />
+      </topic>
+    </topic>
+  </topic>
+</toc>

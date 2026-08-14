@@ -1,0 +1,76 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=us-ascii" />
+<meta http-equiv="Content-Style-Type" content="text/css" />
+<meta http-equiv="Content-Script-Type" content="text/javascript" />
+<title>Detecting Leaks from the Trend Tab When Two or More Classes Have the Same Name</title>
+<meta name="generator" content="Oracle DARB XHTML Converter (Mode = ohj/ohw) - Version 1.0.3" />
+<meta name="date" content="2011-07-13T23:48:0Z" />
+<meta name="robots" content="noarchive" />
+<meta name="doctitle" content="Detecting Leaks from the Trend Tab When Two or More Classes Have the Same Name" />
+<meta name="relnum" content="Release 4.1" />
+<meta name="partnum" content="E21557-01" />
+<meta name="topic-id" content="memleak_classloadtrend" />
+<link rel="copyright" href="./dcommon/html/cpyr.htm" title="Copyright" type="text/html" />
+<link rel="stylesheet" href="./dcommon/css/blafdoc.css" title="Oracle BLAFDoc" type="text/css" />
+<link rel="contents" href="toc.htm" title="Contents" type="text/html" />
+<link rel="prev" href="using007.htm" title="Previous" type="text/html" />
+<link rel="next" href="using009.htm" title="Next" type="text/html" />
+</head>
+<body>
+<div class="zz-skip-header"><a href="#BEGIN">Skip Headers</a></div>
+<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100%">
+<col width="86%" />
+<col width="*" />
+<tr valign="bottom">
+<td align="left"></td>
+<td align="center"><a href="using007.htm"><img src="./dcommon/gifs/leftnav.gif" alt="Previous" /><br />
+<span class="icon">Previous</span></a>&nbsp;</td>
+<td align="center"><a href="using009.htm"><img src="./dcommon/gifs/rightnav.gif" alt="Next" /><br />
+<span class="icon">Next</span></a></td>
+</tr>
+</table>
+<p><a id="BDHFEJFJ" name="BDHFEJFJ"></a><a id="memleak_classloadtrend" name="memleak_classloadtrend"></a></p>
+<div class="sect2">
+<h1>Detecting Leaks from the Trend Tab When Two or More Classes Have the Same Name</h1>
+<a name="BEGIN" id="BEGIN"></a>
+<p>For any given class name, more than one class may be loaded, provided every loaded class with that name was loaded by a different class loader. In some JVM environments, this is more common than in others. The various loaded classes may all be created from identical class files. Alternatively, they may be different versions of the same class, for example in an application server running two versions of the same application. They may also be completely different classes that just happen to use the same fully qualified class name, perhaps because naming conventions wasn't followed. Sometimes, leaks occur in only some of the loaded classes with a certain name, but not in the others.</p>
+<p>Depending on the situation, it may be important to distinguish between classes with the same name. It other situations, it may not be significant. For this reason, the Trend tab and the Type relations tab tab both provide two views of classes. By default, all classes with the same name are combined and displayed as a single Joined Type. The easiest way to tell if multiple classes with the same name exist is to look at the icon, since joined types have two class circles or sets of array brackets instead of just one. Further information may be obtained by placing your pointer over the type row. A tooltip will appear listing all classes that were joined into that type, as shown in <a href="#BDHFAGIA">Figure: Multiple Versions of the Same Type Tooltip</a>. You can also enable additional columns in the table to show class loader information.</p>
+<p>If one of the joined types is causing the problem, the entire joined type will appear red. You can then switch mode to display the individual classes and determine if the all seem to grow about the same or if any individual class can be singled out as being the cause.</p>
+<div class="figure"><a id="BDHFAGIA" name="BDHFAGIA"></a>
+<p class="titleinfigure">Multiple Versions of the Same Type Tooltip</p>
+<img src="img/multitypetooltip.gif" alt="Description of this figure follows" title="Description of this figure follows" longdesc="img_text/multitypetooltip.htm" /><br />
+<a id="sthref13" name="sthref13" href="img_text/multitypetooltip.htm">Description of "Multiple Versions of the Same Type Tooltip"</a><br />
+<br /></div>
+<!-- class="figure" -->
+<p>You can expand this view of the Trend tab to show types by class loader and then recombine them to return to the default view.</p>
+<p><span class="bold">To split classes:</span></p>
+<p>Click the Split Classes button:</p>
+<img src="img/splitclasses.gif" alt="Depicts the letter C in a circle." title="Depicts the letter C in a circle." /><br />
+<p>When you split the classes, the Classloader and Classloader ID columns display the respective class loader information for each type.</p>
+<p><span class="bold">To combine classes:</span></p>
+<p>Click the Join Classes button:</p>
+<img src="img/joinclasses.gif" alt="Two overlapping circles, each with the letter C" title="Two overlapping circles, each with the letter C" /><br />
+<p>Note that the Classloader and Classloader ID columns now display Multiple.</p>
+</div>
+<!-- class="sect2" -->
+<!-- Start Footer -->
+<div class="footer">
+<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100%">
+<col width="86%" />
+<col width="*" />
+<tr>
+<td align="left"><span class="copyrightlogo">Copyright&nbsp;&copy;&nbsp;2001, 2011,&nbsp;Oracle&nbsp;and/or&nbsp;its&nbsp;affiliates.&nbsp;All&nbsp;rights&nbsp;reserved.</span><br />
+<a href="./dcommon/html/cpyr.htm"><span class="copyrightlogo">Legal Notices</span></a></td>
+<td align="center"><a href="using007.htm"><img src="./dcommon/gifs/leftnav.gif" alt="Previous" /><br />
+<span class="icon">Previous</span></a>&nbsp;</td>
+<td align="center"><a href="using009.htm"><img src="./dcommon/gifs/rightnav.gif" alt="Next" /><br />
+<span class="icon">Next</span></a></td>
+</tr>
+</table>
+</div>
+<!-- class="footer" -->
+</body>
+</html>

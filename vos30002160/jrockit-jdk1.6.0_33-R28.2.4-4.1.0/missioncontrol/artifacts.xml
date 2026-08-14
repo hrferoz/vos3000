@@ -1,0 +1,872 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?artifactRepository version='1.1.0'?>
+<repository name='Bundle pool' type='org.eclipse.equinox.p2.artifact.repository.simpleRepository' version='1'>
+  <properties size='2'>
+    <property name='p2.system' value='true'/>
+    <property name='p2.timestamp' value='1320182890726'/>
+  </properties>
+  <mappings size='3'>
+    <rule filter='(&amp; (classifier=osgi.bundle))' output='${repoUrl}/plugins/${id}_${version}.jar'/>
+    <rule filter='(&amp; (classifier=binary))' output='${repoUrl}/binary/${id}_${version}'/>
+    <rule filter='(&amp; (classifier=org.eclipse.update.feature))' output='${repoUrl}/features/${id}_${version}.jar'/>
+  </mappings>
+  <artifacts size='163'>
+    <artifact classifier='osgi.bundle' id='com.jrockit.mc.alert.zh_CN' version='4.1.0.147304'>
+      <properties size='1'>
+        <property name='download.size' value='2108'/>
+      </properties>
+    </artifact>
+    <artifact classifier='org.eclipse.update.feature' id='com.jrockit.mc.feature.flightrecorder' version='4.1.0.147304'>
+      <properties size='1'>
+        <property name='download.size' value='6741'/>
+      </properties>
+      <repositoryProperties size='1'>
+        <property name='artifact.folder' value='true'/>
+      </repositoryProperties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='com.jrockit.mc.flightrecorder' version='4.1.0.147304'>
+      <properties size='1'>
+        <property name='download.size' value='287867'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.core.runtime.compatibility.registry' version='3.5.0.v20110505'>
+      <properties size='1'>
+        <property name='download.size' value='12771'/>
+      </properties>
+      <repositoryProperties size='1'>
+        <property name='artifact.folder' value='true'/>
+      </repositoryProperties>
+    </artifact>
+    <artifact classifier='org.eclipse.update.feature' id='com.jrockit.mc.rcp.product' version='4.1.0.147304'>
+      <properties size='1'>
+        <property name='download.size' value='931'/>
+      </properties>
+      <repositoryProperties size='1'>
+        <property name='artifact.folder' value='true'/>
+      </repositoryProperties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.apache.lucene.analysis' version='2.9.1.v201101211721'>
+      <properties size='1'>
+        <property name='download.size' value='216089'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='com.jrockit.mc.alert' version='4.1.0.147304'>
+      <properties size='1'>
+        <property name='download.size' value='24734'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.equinox.http.registry' version='1.1.100.v20110502'>
+      <properties size='1'>
+        <property name='download.size' value='43997'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='com.jrockit.mc.docs' version='4.1.0.147304'>
+      <properties size='1'>
+        <property name='download.size' value='124336'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='com.jrockit.mc.memleak.ui.zh_CN' version='4.1.0.147304'>
+      <properties size='1'>
+        <property name='download.size' value='112282'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='com.jrockit.mc.console.ui.diagnostic.zh_CN' version='4.1.0.147304'>
+      <properties size='1'>
+        <property name='download.size' value='23257'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='com.jrockit.mc.console.ui.system' version='4.1.0.147304'>
+      <properties size='1'>
+        <property name='download.size' value='141172'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='javax.servlet' version='2.5.0.v201103041518'>
+      <properties size='1'>
+        <property name='download.size' value='119303'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='com.jrockit.mc.console.ui.notification.zh_CN' version='4.1.0.147304'>
+      <properties size='1'>
+        <property name='download.size' value='33717'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='com.jrockit.mc.docs.zh_CN' version='4.1.0.147304'>
+      <properties size='1'>
+        <property name='download.size' value='85133'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='com.jrockit.mc.greychartplugin' version='4.1.0.147304'>
+      <properties size='1'>
+        <property name='download.size' value='149117'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='com.jrockit.mc.rcp.application' version='4.1.0.147304'>
+      <properties size='1'>
+        <property name='download.size' value='138790'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='com.jrockit.mc.rjmx.core.ja' version='4.1.0.147304'>
+      <properties size='1'>
+        <property name='download.size' value='5886'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.ui.workbench' version='3.7.0.I20110519-0100'>
+      <properties size='1'>
+        <property name='download.size' value='4165291'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.equinox.security' version='1.1.0.v20110502'>
+      <properties size='1'>
+        <property name='download.size' value='106103'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='com.jrockit.mc.greychart.ui.ja' version='4.1.0.147304'>
+      <properties size='1'>
+        <property name='download.size' value='3121'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.ui.forms' version='3.5.100.v20110425'>
+      <properties size='1'>
+        <property name='download.size' value='300864'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.update.configurator' version='3.3.100.v20100512'>
+      <properties size='1'>
+        <property name='download.size' value='99906'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.equinox.simpleconfigurator' version='1.0.200.v20110502-1955'>
+      <properties size='1'>
+        <property name='download.size' value='39502'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='com.jrockit.mc.console.historicaldata.ja' version='4.1.0.147304'>
+      <properties size='1'>
+        <property name='download.size' value='23003'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='com.jrockit.mc.console.ui.diagnostic' version='4.1.0.147304'>
+      <properties size='1'>
+        <property name='download.size' value='104055'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='com.jrockit.mc.flightrecorder.controlpanel.ui' version='4.1.0.147304'>
+      <properties size='1'>
+        <property name='download.size' value='201812'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.equinox.launcher.gtk.linux.x86_64' version='1.1.100.v20110505'>
+      <properties size='1'>
+        <property name='download.size' value='74007'/>
+      </properties>
+      <repositoryProperties size='1'>
+        <property name='artifact.folder' value='true'/>
+      </repositoryProperties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='com.jrockit.mc.ui.zh_CN' version='4.1.0.147304'>
+      <properties size='1'>
+        <property name='download.size' value='10742'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='com.jrockit.mc.console.ui.information.ja' version='4.1.0.147304'>
+      <properties size='1'>
+        <property name='download.size' value='13009'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.equinox.util' version='1.0.300.v20110502'>
+      <properties size='1'>
+        <property name='download.size' value='76821'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='com.jrockit.mc.memleak.ui' version='4.1.0.147304'>
+      <properties size='1'>
+        <property name='download.size' value='3873015'/>
+      </properties>
+      <repositoryProperties size='1'>
+        <property name='artifact.folder' value='true'/>
+      </repositoryProperties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='com.jrockit.mc.console.ui.notification.ja' version='4.1.0.147304'>
+      <properties size='1'>
+        <property name='download.size' value='35446'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.mortbay.jetty.util' version='6.1.23.v201012071420'>
+      <properties size='1'>
+        <property name='download.size' value='193298'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.apache.commons.logging' version='1.0.4.v201101211617'>
+      <properties size='1'>
+        <property name='download.size' value='45405'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='com.jrockit.mc.core' version='4.1.0.147304'>
+      <properties size='1'>
+        <property name='download.size' value='30135'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.equinox.jsp.jasper' version='1.0.300.v20110502'>
+      <properties size='1'>
+        <property name='download.size' value='25531'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.ui.intro' version='3.4.100.v20110425'>
+      <properties size='1'>
+        <property name='download.size' value='308534'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.core.resources' version='3.7.100.v20110510-0712'>
+      <properties size='1'>
+        <property name='download.size' value='810223'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='com.jrockit.mc.console.ui.system.ja' version='4.1.0.147304'>
+      <properties size='1'>
+        <property name='download.size' value='32704'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='com.jrockit.mc.rcp.intro.ja' version='4.1.0.147304'>
+      <properties size='1'>
+        <property name='download.size' value='3698'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='com.jrockit.mc.browser.attach.ja' version='4.1.0.147304'>
+      <properties size='1'>
+        <property name='download.size' value='3213'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.equinox.common' version='3.6.0.v20110523'>
+      <properties size='1'>
+        <property name='download.size' value='105626'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='com.jrockit.mc.components.ui.ja' version='4.1.0.147304'>
+      <properties size='1'>
+        <property name='download.size' value='4050'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='com.jrockit.mc.greychart.ui' version='4.1.0.147304'>
+      <properties size='1'>
+        <property name='download.size' value='38595'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='com.jrockit.mc.console.ui.information' version='4.1.0.147304'>
+      <properties size='1'>
+        <property name='download.size' value='50216'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='com.jrockit.mc.memleak.api' version='4.1.0.147304'>
+      <properties size='1'>
+        <property name='download.size' value='205681'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='com.jrockit.mc.console.ui.nativememory' version='4.1.0.147304'>
+      <properties size='1'>
+        <property name='download.size' value='77271'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.apache.commons.el' version='1.0.0.v201101211617'>
+      <properties size='1'>
+        <property name='download.size' value='128684'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='com.jrockit.mc.browser.attach.zh_CN' version='4.1.0.147304'>
+      <properties size='1'>
+        <property name='download.size' value='3078'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.equinox.launcher' version='1.2.0.v20110502'>
+      <properties size='1'>
+        <property name='download.size' value='47259'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.equinox.app' version='1.3.100.v20110321'>
+      <properties size='1'>
+        <property name='download.size' value='85220'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.core.net' version='1.2.100.I20110511-0800'>
+      <properties size='1'>
+        <property name='download.size' value='69179'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='com.jrockit.mc.browser.zh_CN' version='4.1.0.147304'>
+      <properties size='1'>
+        <property name='download.size' value='35204'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.mortbay.jetty.server' version='6.1.23.v201012071420'>
+      <properties size='1'>
+        <property name='download.size' value='557887'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.update.ui' version='3.2.300.v20100512'>
+      <properties size='1'>
+        <property name='download.size' value='507185'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.help.ui' version='3.5.100.v20110425'>
+      <properties size='1'>
+        <property name='download.size' value='509249'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.text' version='3.5.100.v20110505-0800'>
+      <properties size='1'>
+        <property name='download.size' value='248173'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='com.jrockit.mc.console.historicaldata' version='4.1.0.147304'>
+      <properties size='1'>
+        <property name='download.size' value='97534'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='com.jrockit.mc.rjmx.ext' version='4.1.0.147304'>
+      <properties size='1'>
+        <property name='download.size' value='6347'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='com.jrockit.mc.console.ui.overview.zh_CN' version='4.1.0.147304'>
+      <properties size='1'>
+        <property name='download.size' value='23271'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.equinox.registry' version='3.5.100.v20110502'>
+      <properties size='1'>
+        <property name='download.size' value='183014'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='com.jrockit.mc.console.ui.system.zh_CN' version='4.1.0.147304'>
+      <properties size='1'>
+        <property name='download.size' value='31494'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.ui.views' version='3.6.0.I20110412-0800'>
+      <properties size='1'>
+        <property name='download.size' value='90135'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='com.jrockit.mc.rjmx.core' version='4.1.0.147304'>
+      <properties size='1'>
+        <property name='download.size' value='90436'/>
+      </properties>
+    </artifact>
+    <artifact classifier='org.eclipse.update.feature' id='org.eclipse.rcp' version='3.7.0.v20110216-9DB5Fm1FpBGy_AaVz-mFamgY'>
+      <properties size='1'>
+        <property name='download.size' value='26351'/>
+      </properties>
+      <repositoryProperties size='1'>
+        <property name='artifact.folder' value='true'/>
+      </repositoryProperties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.ui' version='3.7.0.I20110602-0100'>
+      <properties size='1'>
+        <property name='download.size' value='153153'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.apache.lucene' version='2.9.1.v201101211721'>
+      <properties size='1'>
+        <property name='download.size' value='71018'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='com.jrockit.mc.components.ui' version='4.1.0.147304'>
+      <properties size='1'>
+        <property name='download.size' value='403053'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='com.jrockit.mc.rjmx.core.zh_CN' version='4.1.0.147304'>
+      <properties size='1'>
+        <property name='download.size' value='5651'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.osgi.services' version='3.3.0.v20110513'>
+      <properties size='1'>
+        <property name='download.size' value='71159'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.equinox.jsp.jasper.registry' version='1.0.200.v20100503'>
+      <properties size='1'>
+        <property name='download.size' value='11131'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='com.jrockit.mc.browser.jdp' version='4.1.0.147304'>
+      <properties size='1'>
+        <property name='download.size' value='16073'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='com.jrockit.mc.console.ui.mbeanbrowser' version='4.1.0.147304'>
+      <properties size='1'>
+        <property name='download.size' value='333498'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='com.jrockit.mc.console.ui.nativememory.ja' version='4.1.0.147304'>
+      <properties size='1'>
+        <property name='download.size' value='3011'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='com.jrockit.mc.flightrecorder.controlpanel.ui.ja' version='4.1.0.147304'>
+      <properties size='1'>
+        <property name='download.size' value='7465'/>
+      </properties>
+    </artifact>
+    <artifact classifier='org.eclipse.update.feature' id='com.jrockit.mc.feature.rcp.zh_CN' version='4.1.0.147304'>
+      <properties size='1'>
+        <property name='download.size' value='14047'/>
+      </properties>
+      <repositoryProperties size='1'>
+        <property name='artifact.folder' value='true'/>
+      </repositoryProperties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='com.jrockit.mc.ui' version='4.1.0.147304'>
+      <properties size='1'>
+        <property name='download.size' value='760239'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='com.jrockit.mc.browser.jdp.ja' version='4.1.0.147304'>
+      <properties size='1'>
+        <property name='download.size' value='2205'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='com.jrockit.mc.rjmx' version='4.1.0.147304'>
+      <properties size='1'>
+        <property name='download.size' value='697369'/>
+      </properties>
+      <repositoryProperties size='1'>
+        <property name='artifact.folder' value='true'/>
+      </repositoryProperties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='com.jrockit.mc.rjmx.ui.zh_CN' version='4.1.0.147304'>
+      <properties size='1'>
+        <property name='download.size' value='5815'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.core.runtime' version='3.7.0.v20110110'>
+      <properties size='1'>
+        <property name='download.size' value='70522'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='com.jrockit.mc.memleak.ui.ja' version='4.1.0.147304'>
+      <properties size='1'>
+        <property name='download.size' value='116701'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.core.filesystem' version='1.3.100.v20110423-0524'>
+      <properties size='1'>
+        <property name='download.size' value='53218'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.core.databinding' version='1.4.0.I20110111-0800'>
+      <properties size='1'>
+        <property name='download.size' value='200966'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.swt.gtk.linux.x86_64' version='3.7.0.v3735b'>
+      <properties size='1'>
+        <property name='download.size' value='2484975'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='com.jrockit.mc.console.ui' version='4.1.0.147304'>
+      <properties size='1'>
+        <property name='download.size' value='250919'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.apache.lucene.core' version='2.9.1.v201101211721'>
+      <properties size='1'>
+        <property name='download.size' value='1168475'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='com.jrockit.mc.commands' version='4.1.0.147304'>
+      <properties size='1'>
+        <property name='download.size' value='32480'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='com.jrockit.mc.console.ui.mbeanbrowser.zh_CN' version='4.1.0.147304'>
+      <properties size='1'>
+        <property name='download.size' value='40757'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='com.jrockit.mc.console.ui.profiler' version='4.1.0.147304'>
+      <properties size='1'>
+        <property name='download.size' value='222817'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='com.jrockit.mc.console.ui.overview' version='4.1.0.147304'>
+      <properties size='1'>
+        <property name='download.size' value='144303'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='com.jrockit.mc.console.ui.information.zh_CN' version='4.1.0.147304'>
+      <properties size='1'>
+        <property name='download.size' value='12533'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='com.jrockit.mc.flightrecorder.ui.ja' version='4.1.0.147304'>
+      <properties size='1'>
+        <property name='download.size' value='403239'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='com.jrockit.mc.flightrecorder.ui' version='4.1.0.147304'>
+      <properties size='1'>
+        <property name='download.size' value='1358412'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.core.databinding.beans' version='1.2.100.I20100824-0800'>
+      <properties size='1'>
+        <property name='download.size' value='75420'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='com.jrockit.mc.console.historicaldata.zh_CN' version='4.1.0.147304'>
+      <properties size='1'>
+        <property name='download.size' value='22381'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.equinox.http.servlet' version='1.1.200.v20110502'>
+      <properties size='1'>
+        <property name='download.size' value='42548'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='com.jrockit.mc.alert.ja' version='4.1.0.147304'>
+      <properties size='1'>
+        <property name='download.size' value='2173'/>
+      </properties>
+    </artifact>
+    <artifact classifier='org.eclipse.update.feature' id='com.jrockit.mc.feature.core' version='4.1.0.147304'>
+      <properties size='1'>
+        <property name='download.size' value='6898'/>
+      </properties>
+      <repositoryProperties size='1'>
+        <property name='artifact.folder' value='true'/>
+      </repositoryProperties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='com.jrockit.mc.console.ui.nativememory.zh_CN' version='4.1.0.147304'>
+      <properties size='1'>
+        <property name='download.size' value='2972'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='com.jrockit.mc.console.ui.threads' version='4.1.0.147304'>
+      <properties size='1'>
+        <property name='download.size' value='120450'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.equinox.ds' version='1.3.0.v20110502'>
+      <properties size='1'>
+        <property name='download.size' value='189310'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='com.jrockit.mc.console.ui.overview.ja' version='4.1.0.147304'>
+      <properties size='1'>
+        <property name='download.size' value='24019'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='com.jrockit.mc.browser.attach' version='4.1.0.147304'>
+      <properties size='1'>
+        <property name='download.size' value='47526'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='com.jrockit.mc.console.ui.threads.zh_CN' version='4.1.0.147304'>
+      <properties size='1'>
+        <property name='download.size' value='22067'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='com.jrockit.mc.jdp.common' version='4.1.0.147304'>
+      <properties size='1'>
+        <property name='download.size' value='7364'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='com.jrockit.mc.console.ui.profiler.zh_CN' version='4.1.0.147304'>
+      <properties size='1'>
+        <property name='download.size' value='31368'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='com.jrockit.mc.common' version='4.1.0.147304'>
+      <properties size='1'>
+        <property name='download.size' value='112598'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.update.core' version='3.2.500.v20110330'>
+      <properties size='1'>
+        <property name='download.size' value='595821'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='com.jrockit.mc.rcp.application.ja' version='4.1.0.147304'>
+      <properties size='1'>
+        <property name='download.size' value='3702'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='com.jrockit.mc.rcp.application.zh_CN' version='4.1.0.147304'>
+      <properties size='1'>
+        <property name='download.size' value='3500'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='com.jrockit.mc.browser.jdp.zh_CN' version='4.1.0.147304'>
+      <properties size='1'>
+        <property name='download.size' value='2194'/>
+      </properties>
+    </artifact>
+    <artifact classifier='org.eclipse.update.feature' id='com.jrockit.mc.feature.rcp.ja' version='4.1.0.147304'>
+      <properties size='1'>
+        <property name='download.size' value='14027'/>
+      </properties>
+      <repositoryProperties size='1'>
+        <property name='artifact.folder' value='true'/>
+      </repositoryProperties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='com.jrockit.mc.memleak.core' version='4.1.0.147304'>
+      <properties size='1'>
+        <property name='download.size' value='34846'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='com.jrockit.mc.console.ui.threads.ja' version='4.1.0.147304'>
+      <properties size='1'>
+        <property name='download.size' value='23023'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.albireo.core' version='0.0.3.v20081031'>
+      <properties size='1'>
+        <property name='download.size' value='83396'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.help.base' version='3.6.0.v201106131736'>
+      <properties size='1'>
+        <property name='download.size' value='414086'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.swt' version='3.7.0.v3735b'>
+      <properties size='1'>
+        <property name='download.size' value='17338'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.osgi' version='3.7.0.v20110613'>
+      <properties size='1'>
+        <property name='download.size' value='1362240'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='com.jrockit.mc.console.ui.notification' version='4.1.0.147304'>
+      <properties size='1'>
+        <property name='download.size' value='228009'/>
+      </properties>
+      <repositoryProperties size='1'>
+        <property name='artifact.folder' value='true'/>
+      </repositoryProperties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='com.jrockit.mc.console.ui.diagnostic.ja' version='4.1.0.147304'>
+      <properties size='1'>
+        <property name='download.size' value='24051'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='com.jrockit.mc.rjmx.ui.ja' version='4.1.0.147304'>
+      <properties size='1'>
+        <property name='download.size' value='6029'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.jface' version='3.7.0.I20110522-1430'>
+      <properties size='1'>
+        <property name='download.size' value='1077120'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.core.commands' version='3.6.0.I20110111-0800'>
+      <properties size='1'>
+        <property name='download.size' value='107304'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='com.jrockit.mc.console.ui.ja' version='4.1.0.147304'>
+      <properties size='1'>
+        <property name='download.size' value='51118'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='com.jrockit.mc.flightrecorder.ui.zh_CN' version='4.1.0.147304'>
+      <properties size='1'>
+        <property name='download.size' value='390084'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.apache.jasper' version='5.5.17.v201101211617'>
+      <properties size='1'>
+        <property name='download.size' value='1722563'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.jface.databinding' version='1.5.0.I20100907-0800'>
+      <properties size='1'>
+        <property name='download.size' value='275456'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.help.webapp' version='3.6.0.v20110518'>
+      <properties size='1'>
+        <property name='download.size' value='586730'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.core.contenttype' version='3.4.100.v20110423-0524'>
+      <properties size='1'>
+        <property name='download.size' value='91963'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='com.jrockit.mc.console.ui.profiler.ja' version='4.1.0.147304'>
+      <properties size='1'>
+        <property name='download.size' value='32756'/>
+      </properties>
+    </artifact>
+    <artifact classifier='org.eclipse.update.feature' id='com.jrockit.mc.feature.console' version='4.1.0.147304'>
+      <properties size='1'>
+        <property name='download.size' value='6812'/>
+      </properties>
+      <repositoryProperties size='1'>
+        <property name='artifact.folder' value='true'/>
+      </repositoryProperties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='com.jrockit.mc.rjmx.ui' version='4.1.0.147304'>
+      <properties size='1'>
+        <property name='download.size' value='311553'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='com.jrockit.mc.greychart.ui.zh_CN' version='4.1.0.147304'>
+      <properties size='1'>
+        <property name='download.size' value='3097'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='com.jrockit.mc.docs.ja' version='4.1.0.147304'>
+      <properties size='1'>
+        <property name='download.size' value='88225'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='javax.servlet.jsp' version='2.0.0.v201101211617'>
+      <properties size='1'>
+        <property name='download.size' value='63887'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='com.jrockit.mc.console.ui.mbeanbrowser.ja' version='4.1.0.147304'>
+      <properties size='1'>
+        <property name='download.size' value='42030'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='com.jrockit.mc.rcp.intro' version='4.1.0.147304'>
+      <properties size='1'>
+        <property name='download.size' value='74263'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='com.jrockit.mc.ui.ja' version='4.1.0.147304'>
+      <properties size='1'>
+        <property name='download.size' value='11147'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.core.expressions' version='3.4.300.v20110228'>
+      <properties size='1'>
+        <property name='download.size' value='86991'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='com.jrockit.mc.browser.ja' version='4.1.0.147304'>
+      <properties size='1'>
+        <property name='download.size' value='36407'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='com.jrockit.mc.console.ui.zh_CN' version='4.1.0.147304'>
+      <properties size='1'>
+        <property name='download.size' value='49463'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.core.runtime.compatibility.auth' version='3.2.200.v20110110'>
+      <properties size='1'>
+        <property name='download.size' value='22834'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='com.jrockit.mc.components.ui.zh_CN' version='4.1.0.147304'>
+      <properties size='1'>
+        <property name='download.size' value='3843'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='com.ibm.icu' version='4.4.2.v20110208'>
+      <properties size='1'>
+        <property name='download.size' value='6690627'/>
+      </properties>
+    </artifact>
+    <artifact classifier='org.eclipse.update.feature' id='org.eclipse.help' version='1.3.0.v20110327-7i7uFFiFFt6ZqnbOrMXLd1'>
+      <properties size='1'>
+        <property name='download.size' value='25679'/>
+      </properties>
+      <repositoryProperties size='1'>
+        <property name='artifact.folder' value='true'/>
+      </repositoryProperties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.equinox.http.jetty' version='2.0.100.v20110502'>
+      <properties size='1'>
+        <property name='download.size' value='24884'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='com.jrockit.mc.rmp.common' version='4.1.0.147304'>
+      <properties size='1'>
+        <property name='download.size' value='33710'/>
+      </properties>
+    </artifact>
+    <artifact classifier='org.eclipse.update.feature' id='com.jrockit.mc.feature.memleak' version='4.1.0.147304'>
+      <properties size='1'>
+        <property name='download.size' value='6755'/>
+      </properties>
+      <repositoryProperties size='1'>
+        <property name='artifact.folder' value='true'/>
+      </repositoryProperties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='com.jrockit.mc.jdp.client' version='4.1.0.147304'>
+      <properties size='1'>
+        <property name='download.size' value='6263'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.help.appserver' version='3.1.400.v20110425'>
+      <properties size='1'>
+        <property name='download.size' value='18310'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='com.jrockit.mc.flightrecorder.controlpanel.ui.zh_CN' version='4.1.0.147304'>
+      <properties size='1'>
+        <property name='download.size' value='7055'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.rcp' version='3.7.0.v201106131736'>
+      <properties size='1'>
+        <property name='download.size' value='14138'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='com.jrockit.mc.browser' version='4.1.0.147304'>
+      <properties size='1'>
+        <property name='download.size' value='194114'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.core.jobs' version='3.5.100.v20110404'>
+      <properties size='1'>
+        <property name='download.size' value='91038'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='com.jrockit.mc.rmp' version='4.1.0.147304'>
+      <properties size='1'>
+        <property name='download.size' value='70780'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.equinox.preferences' version='3.4.0.v20110502'>
+      <properties size='1'>
+        <property name='download.size' value='111583'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.core.databinding.property' version='1.4.0.I20110222-0800'>
+      <properties size='1'>
+        <property name='download.size' value='167962'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.help' version='3.5.100.v20110426'>
+      <properties size='1'>
+        <property name='download.size' value='257400'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.jface.text' version='3.7.0.v20110505-0800'>
+      <properties size='1'>
+        <property name='download.size' value='981517'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.core.databinding.observable' version='1.4.0.I20110222-0800'>
+      <properties size='1'>
+        <property name='download.size' value='296142'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='com.jrockit.mc.rcp.intro.zh_CN' version='4.1.0.147304'>
+      <properties size='1'>
+        <property name='download.size' value='3549'/>
+      </properties>
+    </artifact>
+  </artifacts>
+</repository>

@@ -1,0 +1,10 @@
+<contexts>
+	<context id="table" title="Trend Analysis">
+		<description>Analysing Type Growth</description>
+		<topic href="html/using_trendanalysis.htm#i1070111" label="Analyzing Live Set Trends">
+			<topic href="html/using007.htm#BDHIFHGJ" label="Trend Analysis Procedures" />
+			<topic href="html/using008.htm#BDHFEJFJ" label="Detecting Leaks from the Trend Tab When Two or More Classes Have the Same Name" />
+			<topic href="html/using009.htm#sthref5" label="To Jump to Application Source Code" />
+		</topic>
+	</context>
+</contexts>

@@ -1,0 +1,61 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=us-ascii" />
+<meta http-equiv="Content-Style-Type" content="text/css" />
+<meta http-equiv="Content-Script-Type" content="text/javascript" />
+<title>About the Memory Leak Detector</title>
+<meta name="generator" content="Oracle DARB XHTML Converter (Mode = ohj/ohw) - Version 1.0.3" />
+<meta name="date" content="2011-07-13T23:47:57Z" />
+<meta name="robots" content="noarchive" />
+<meta name="doctitle" content="About the Memory Leak Detector" />
+<meta name="relnum" content="Release 4.1" />
+<meta name="partnum" content="E21557-01" />
+<meta name="topic-id" content="MEMLK101" />
+<link rel="copyright" href="./dcommon/html/cpyr.htm" title="Copyright" type="text/html" />
+<link rel="stylesheet" href="./dcommon/css/blafdoc.css" title="Oracle BLAFDoc" type="text/css" />
+<link rel="contents" href="toc.htm" title="Contents" type="text/html" />
+<link rel="prev" href="about.htm" title="Previous" type="text/html" />
+<link rel="next" href="intro_howwork.htm" title="Next" type="text/html" />
+</head>
+<body>
+<div class="zz-skip-header"><a href="#BEGIN">Skip Headers</a></div>
+<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100%">
+<col width="86%" />
+<col width="*" />
+<tr valign="bottom">
+<td align="left"></td>
+<td align="center"><a href="about.htm"><img src="./dcommon/gifs/leftnav.gif" alt="Previous" /><br />
+<span class="icon">Previous</span></a>&nbsp;</td>
+<td align="center"><a href="intro_howwork.htm"><img src="./dcommon/gifs/rightnav.gif" alt="Next" /><br />
+<span class="icon">Next</span></a></td>
+</tr>
+</table>
+<p><a id="i1074958" name="i1074958"></a><a id="MEMLK101" name="MEMLK101"></a></p>
+<div class="sect1">
+<h1>About the Memory Leak Detector</h1>
+<a name="BEGIN" id="BEGIN"></a>
+<p>A memory leak occurs when application code holds on to memory that the application is no longer using. The result of a memory leak can be out of memory errors and poor overall system performance. The Memory Leak Detector is a real-time profiling tool that provides information about the types of objects allocated, how many were allocated, their size, and how they relate to each other.</p>
+<p>Unlike other similar tools, there is no need to create full heap dumps for off-line analysis. The Memory Leak Detector fetches its data directly from the running JVM, which can continue to run with a relatively small overhead. When the analysis is done, the tool can be disconnected and the JVM will run at full speed again. This makes the tool viable for use in a production environment.</p>
+<p>The purpose of the Memory Leak Detector is to display memory leaking types and provide help to track the source of the problem. Another purpose of this tool is to help increase the understanding and knowledge of how an application is performing in order to improve programming practices in future projects.</p>
+</div>
+<!-- class="sect1" -->
+<!-- Start Footer -->
+<div class="footer">
+<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100%">
+<col width="86%" />
+<col width="*" />
+<tr>
+<td align="left"><span class="copyrightlogo">Copyright&nbsp;&copy;&nbsp;2001, 2011,&nbsp;Oracle&nbsp;and/or&nbsp;its&nbsp;affiliates.&nbsp;All&nbsp;rights&nbsp;reserved.</span><br />
+<a href="./dcommon/html/cpyr.htm"><span class="copyrightlogo">Legal Notices</span></a></td>
+<td align="center"><a href="about.htm"><img src="./dcommon/gifs/leftnav.gif" alt="Previous" /><br />
+<span class="icon">Previous</span></a>&nbsp;</td>
+<td align="center"><a href="intro_howwork.htm"><img src="./dcommon/gifs/rightnav.gif" alt="Next" /><br />
+<span class="icon">Next</span></a></td>
+</tr>
+</table>
+</div>
+<!-- class="footer" -->
+</body>
+</html>

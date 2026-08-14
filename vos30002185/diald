@@ -1,0 +1,236 @@
+#!/bin/sh
+#
+# chkconfig: 2345 82 8
+# description: Start and stop kunshi dial daemon
+
+### BEGIN INIT INFO
+# Provides: diald
+# Required-Start: network
+# Required-Stop: 
+# Should-Start: 
+# Default-Start: 2 3 4 5
+# Default-Stop: 0 1 6
+# Description: kunshi dial daemon
+### END INIT INFO
+
+if [ -f /etc/init.d/functions ]; then
+	SYSTEMCTL_SKIP_REDIRECT=true
+	. /etc/init.d/functions
+fi
+[ -f /etc/rc.status ] && . /etc/rc.status
+echo_success_system()
+{
+	if [ -f /etc/init.d/functions -a "$MOVE_TO_COL" != "" ];then
+		echo -en "\e[0;39m"
+		echo_success
+		echo -e
+	elif [ -f /etc/rc.status ];then
+		_rc_status=0
+		rc_status -v
+	else
+		echo -e "\\033[60G\e[32;40m[  OK  ]"
+	fi
+	echo -en "\e[0;39m"
+}
+echo_failed_system()
+{
+	if [ -f /etc/init.d/functions -a "$MOVE_TO_COL" != "" ];then
+		echo -en "\e[0;39m"
+		echo_failure
+		echo -e
+	elif [ -f /etc/rc.status ];then
+		_rc_status=1
+		rc_status -v
+	else
+		echo -e "\\033[60G\e[31;40m[FAILED]"
+	fi
+	echo -en "\e[0;39m"
+}
+
+APP_HOME=/home/kunshi/dial
+APP_PID_FILE=/home/kunshi/.run/dial.pid
+APP_PID_LOCK=$APP_PID_FILE.lock
+APP_LOCK_FILE=/var/lock/subsys/diald
+APP_STOP_FILE=/home/kunshi/.run/dial.stop
+DUMP_COMMAND_FILE=/home/kunshi/dial/etc/dumpcommand
+SUB_PARAMETER="$2"
+
+TIP_START="Starting kunshi dial:"
+TIP_STOP="Shutting down kunshi dial:"
+
+processStatus()
+{
+	if [ -f $APP_PID_FILE -a -s $APP_PID_FILE ]; then
+		PID=`cat $APP_PID_FILE`
+		[ ! -d /proc/"$PID"/cwd ] && { return 1; }
+		PATH_CWD=`readlink /proc/"$PID"/cwd`
+		[ "$PATH_CWD" = "$APP_HOME"/bin ] && { return 0; }
+	fi
+	return 3
+}
+status()
+{
+	processStatus
+	STATUS_TMP=$?
+	if [ "$STATUS_TMP" = "0" ]; then
+	   echo "Process is running. Pid: $PID"
+	   exit $STATUS_TMP
+	fi
+	if [ -f $APP_STOP_FILE ]; then
+	   echo "Process stopped manually"
+	   exit 2
+	fi
+	if [ "$STATUS_TMP" = "1" ]; then
+	   echo "Process exited abnormally. Pid file: $APP_PID_FILE"
+	   exit $STATUS_TMP
+	fi       
+	echo "Process does not exist."
+	exit $STATUS_TMP
+}
+start()
+{
+	echo -en $"\e[33;40m$TIP_START"
+	processStatus
+	[ "$?" = "0" ] && { echo_failed_system; return 1; }
+	APP_BIN_DIR=$APP_HOME/bin
+	APP_EXE_FILE=$APP_BIN_DIR/dial
+	if [ "$USER" = "kunshi" ];then
+		cd $APP_BIN_DIR >/dev/null 2>&1
+		$APP_EXE_FILE -r $APP_PID_FILE > /dev/null 2>&1
+		cd - >/dev/null 2>&1
+	else
+		su - kunshi -c "cd $APP_BIN_DIR >/dev/null 2>&1; $APP_EXE_FILE -r $APP_PID_FILE > /dev/null 2>&1" 
+	fi
+	[ "$USER" != "kunshi" ] && touch $APP_LOCK_FILE
+	[ -f $APP_STOP_FILE ] && rm -f $APP_STOP_FILE
+	echo_success_system
+}
+stop()
+{
+	echo -en $"\e[33;40m$TIP_STOP"
+	[ -f $APP_STOP_FILE ] || touch $APP_STOP_FILE > /dev/null 2>&1
+	[ "$USER" != "kunshi" ] && chown kunshi:kunshi $APP_STOP_FILE > /dev/null 2>&1
+	processStatus
+	if [ "$?" = "0" ]; then
+		PID=`cat $APP_PID_FILE`
+		if [ -d /proc/$PID ]; then
+			kill $PID >/dev/null 2>&1
+			STRTMP="i"
+			while [ -d /proc/$PID ]
+			do
+				sleep 1
+				STRTMP=$STRTMP"i"
+				if [ "$STRTMP" = "iiiiiiiiiiiiii" ]; then
+					break
+				fi
+			done
+			if [ -d /proc/$PID ]; then
+				kill -9 $PID >/dev/null 2>&1
+				sleep 2
+			fi
+			if [ -d /proc/$PID ]; then
+				echo_failed_system
+				return 1
+			fi
+		fi
+		rm -f $APP_PID_FILE
+		[ -f $APP_PID_LOCK ] && rm -f $APP_PID_LOCK
+	fi
+	echo_success_system
+	[ "$USER" != "kunshi" -a -f $APP_LOCK_FILE ] && { rm -f $APP_LOCK_FILE; }
+}
+restart()
+{
+	stop
+	start
+}
+adjustclock()
+{
+	TIP_ADJUST_CLOCK="adjust dial clock:"
+	echo -en $"\e[33;40m$TIP_ADJUST_CLOCK"
+	processStatus
+	if [ "$?" = "0" ]; then
+		PID=`cat $APP_PID_FILE`
+		if [ -d /proc/$PID ]; then
+			kill -VTALRM $PID >/dev/null 2>&1
+			echo_success_system
+			return 0
+		fi
+	fi
+	echo_failed_system
+	return 1
+}
+reparse()
+{
+	TIP_REPARSE="Reparsing dial license:"
+	echo -en $"\e[33;40m$TIP_REPARSE"
+	processStatus
+	if [ "$?" = "0" ]; then
+		PID=`cat $APP_PID_FILE`
+		if [ -d /proc/$PID ]; then
+			kill -HUP $PID
+			echo_success_system
+			return 0
+		fi
+	fi
+	echo_failed_system
+	return 1
+}
+dump()
+{
+	echo -en $"\e[33;40mDumping dial:"
+	processStatus
+	if [ "$?" = "0" ]; then
+		PID=`cat $APP_PID_FILE`
+		if [ -d /proc/$PID ]; then
+			echo "$SUB_PARAMETER" > $DUMP_COMMAND_FILE
+			/bin/chown kunshi:kunshi $DUMP_COMMAND_FILE
+			/bin/chmod 660 $DUMP_COMMAND_FILE
+			kill -USR2 $PID
+			SLEEP_TIME=1
+			while [ "$SLEEP_TIME" -lt "15" ];do
+				[ ! -f "$DUMP_COMMAND_FILE" ] && { break;}
+				SLEEP_TIME=$((SLEEP_TIME + 1))
+				sleep 1
+			done
+			if [ "$SLEEP_TIME" = "15" ]; then
+				echo_failed_system
+				return 1
+			fi
+			echo_success_system
+			return 0
+		fi
+	fi
+	echo_failed_system
+	return 1
+}
+case "$1" in
+	start)
+		start
+		;;
+	stop)
+		stop
+		;;
+	restart)
+		restart
+		;;
+	status)
+		status
+		;;
+	adjustclock)
+		adjustclock
+		;;
+	reparse)
+		reparse
+		;;
+	dump)
+		dump
+		;;
+	*)
+	echo $"Usage: $0 {start|stop|restart|status|adjustclock|reparse|dump}"
+		exit 1
+		;;
+esac
+
+exit $?
+

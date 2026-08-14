@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feature
+      id="com.jrockit.mc.feature.memleak"
+      label="%name"
+      version="4.1.0.147304"
+      provider-name="%provider">
+
+   <description url="%descriptionUrl">
+      %description
+   </description>
+
+   <copyright>
+      %copyright
+   </copyright>
+
+   <license url="%licenseUrl">
+      %license
+   </license>
+
+   <requires>
+      <import feature="com.jrockit.mc.feature.core" version="4.1.0" match="compatible"/>
+   </requires>
+
+   <plugin
+         id="com.jrockit.mc.memleak.api"
+         download-size="0"
+         install-size="0"
+         version="4.1.0.147304"
+         unpack="false"/>
+
+   <plugin
+         id="com.jrockit.mc.memleak.ui"
+         download-size="0"
+         install-size="0"
+         version="4.1.0.147304"/>
+
+   <plugin
+         id="org.eclipse.albireo.core"
+         download-size="0"
+         install-size="0"
+         version="0.0.3.v20081031"
+         unpack="false"/>
+
+   <plugin
+         id="com.jrockit.mc.memleak.core"
+         download-size="0"
+         install-size="0"
+         version="4.1.0.147304"
+         unpack="false"/>
+
+</feature>

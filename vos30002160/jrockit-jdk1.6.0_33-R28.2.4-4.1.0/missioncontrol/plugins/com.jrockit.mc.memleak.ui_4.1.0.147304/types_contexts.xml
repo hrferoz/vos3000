@@ -1,0 +1,18 @@
+<contexts>
+	<context id="graph" title="Type Graph">
+		<description>Investigating Type References</description>
+		<topic href="html/using_references.htm#i1070947" label="Investigating Type References">
+			<topic href="html/using010.htm#BDHHJDBG" label="Starting the Investigation" />
+			<topic href="html/using011.htm#BDHFDGCH" label="Looking at Multiple Classes with the Same Name" />
+			<topic href="html/using012.htm#BDHDFIEB" label="Studying Type References" />
+		</topic>
+	</context>
+	<context id="tree" title="Type Tree">
+		<description>Investigating Type References</description>
+		<topic href="html/using_references.htm#i1070947" label="Investigating Type References">
+			<topic href="html/using010.htm#BDHHJDBG" label="Starting the Investigation" />
+			<topic href="html/using011.htm#BDHFDGCH" label="Looking at Multiple Classes with the Same Name" />
+			<topic href="html/using012.htm#BDHDFIEB" label="Studying Type References" />
+		</topic>
+	</context>
+</contexts>

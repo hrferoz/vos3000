@@ -1,0 +1,22 @@
+#Tue Nov 01 22:28:12 CET 2011
+repositories/file\:_localhome_tendril4.2_work_install_Src_pb_jrockitq_5552439_s_missioncontrol_build_temp_com.jrockit.mc.rcp.product_4.1.0-eclipse.feature_jrmc.product/enabled=true
+repositories/file\:_localhome_tendril4.2_work_install_Src_pb_jrockitq_5552439_s_missioncontrol_build_temp_com.jrockit.mc.rcp.product_4.1.0-eclipse.feature_jrmc.product/isSystem=true
+repositories/http\:__download.eclipse.org_eclipse_updates_3.5/uri=http\://download.eclipse.org/eclipse/updates/3.5
+repositories/http\:__download.eclipse.org_eclipse_updates_3.5/enabled=false
+repositories/file\:_localhome_tendril4.2_work_install_Src_pb_jrockitq_5552439_s_missioncontrol_build_temp_com.jrockit.mc.rcp.product_4.1.0-eclipse.feature_jrmc.product_p2_org.eclipse.equinox.p2.core_cache/description=
+repositories/file\:_localhome_tendril4.2_work_install_Src_pb_jrockitq_5552439_s_missioncontrol_build_temp_com.jrockit.mc.rcp.product_4.1.0-eclipse.feature_jrmc.product/type=org.eclipse.equinox.p2.artifact.repository.simpleRepository
+repositories/file\:_localhome_tendril4.2_work_install_Src_pb_jrockitq_5552439_s_missioncontrol_build_temp_com.jrockit.mc.rcp.product_4.1.0-eclipse.feature_jrmc.product/description=
+repositories/file\:_localhome_tendril4.2_work_install_Src_pb_jrockitq_5552439_s_missioncontrol_build_temp_com.jrockit.mc.rcp.product_4.1.0-eclipse.feature_jrmc.product_p2_org.eclipse.equinox.p2.core_cache/provider=
+eclipse.preferences.version=1
+repositories/file\:_localhome_tendril4.2_work_install_Src_pb_jrockitq_5552439_s_missioncontrol_build_temp_com.jrockit.mc.rcp.product_4.1.0-eclipse.feature_jrmc.product_p2_org.eclipse.equinox.p2.core_cache/enabled=true
+repositories/file\:_localhome_tendril4.2_work_install_Src_pb_jrockitq_5552439_s_missioncontrol_build_temp_com.jrockit.mc.rcp.product_4.1.0-eclipse.feature_jrmc.product/uri=file\:/localhome/tendril4.2/work/install/Src_pb_jrockitq_5552439/s/missioncontrol/build/temp/com.jrockit.mc.rcp.product_4.1.0-eclipse.feature/jrmc.product/
+repositories/file\:_localhome_tendril4.2_work_install_Src_pb_jrockitq_5552439_s_missioncontrol_build_temp_com.jrockit.mc.rcp.product_4.1.0-eclipse.feature_jrmc.product_p2_org.eclipse.equinox.p2.core_cache/name=download cache
+repositories/http\:__download.eclipse.org_eclipse_updates_3.5/isSystem=false
+repositories/file\:_localhome_tendril4.2_work_install_Src_pb_jrockitq_5552439_s_missioncontrol_build_temp_com.jrockit.mc.rcp.product_4.1.0-eclipse.feature_jrmc.product_p2_org.eclipse.equinox.p2.core_cache/uri=file\:/localhome/tendril4.2/work/install/Src_pb_jrockitq_5552439/s/missioncontrol/build/temp/com.jrockit.mc.rcp.product_4.1.0-eclipse.feature/jrmc.product/p2/org.eclipse.equinox.p2.core/cache/
+repositories/file\:_localhome_tendril4.2_work_install_Src_pb_jrockitq_5552439_s_missioncontrol_build_temp_com.jrockit.mc.rcp.product_4.1.0-eclipse.feature_jrmc.product_p2_org.eclipse.equinox.p2.core_cache/suffix=artifacts.xml
+repositories/file\:_localhome_tendril4.2_work_install_Src_pb_jrockitq_5552439_s_missioncontrol_build_temp_com.jrockit.mc.rcp.product_4.1.0-eclipse.feature_jrmc.product_p2_org.eclipse.equinox.p2.core_cache/type=org.eclipse.equinox.p2.artifact.repository.simpleRepository
+repositories/file\:_localhome_tendril4.2_work_install_Src_pb_jrockitq_5552439_s_missioncontrol_build_temp_com.jrockit.mc.rcp.product_4.1.0-eclipse.feature_jrmc.product_p2_org.eclipse.equinox.p2.core_cache/version=1.0.0
+repositories/file\:_localhome_tendril4.2_work_install_Src_pb_jrockitq_5552439_s_missioncontrol_build_temp_com.jrockit.mc.rcp.product_4.1.0-eclipse.feature_jrmc.product/version=1
+repositories/file\:_localhome_tendril4.2_work_install_Src_pb_jrockitq_5552439_s_missioncontrol_build_temp_com.jrockit.mc.rcp.product_4.1.0-eclipse.feature_jrmc.product/provider=
+repositories/file\:_localhome_tendril4.2_work_install_Src_pb_jrockitq_5552439_s_missioncontrol_build_temp_com.jrockit.mc.rcp.product_4.1.0-eclipse.feature_jrmc.product_p2_org.eclipse.equinox.p2.core_cache/isSystem=true
+repositories/file\:_localhome_tendril4.2_work_install_Src_pb_jrockitq_5552439_s_missioncontrol_build_temp_com.jrockit.mc.rcp.product_4.1.0-eclipse.feature_jrmc.product/name=Bundle pool

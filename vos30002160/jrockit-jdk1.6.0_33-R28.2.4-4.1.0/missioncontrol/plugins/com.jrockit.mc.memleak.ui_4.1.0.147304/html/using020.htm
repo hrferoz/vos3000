@@ -1,0 +1,149 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=us-ascii" />
+<meta http-equiv="Content-Style-Type" content="text/css" />
+<meta http-equiv="Content-Script-Type" content="text/javascript" />
+<title>Working with the Instance List</title>
+<meta name="generator" content="Oracle DARB XHTML Converter (Mode = ohj/ohw) - Version 1.0.3" />
+<meta name="date" content="2011-07-13T23:48:1Z" />
+<meta name="robots" content="noarchive" />
+<meta name="doctitle" content="Working with the Instance List" />
+<meta name="relnum" content="Release 4.1" />
+<meta name="partnum" content="E21557-01" />
+<link rel="copyright" href="./dcommon/html/cpyr.htm" title="Copyright" type="text/html" />
+<link rel="stylesheet" href="./dcommon/css/blafdoc.css" title="Oracle BLAFDoc" type="text/css" />
+<link rel="contents" href="toc.htm" title="Contents" type="text/html" />
+<link rel="prev" href="using019.htm" title="Previous" type="text/html" />
+<link rel="next" href="using021.htm" title="Next" type="text/html" />
+</head>
+<body>
+<div class="zz-skip-header"><a href="#BEGIN">Skip Headers</a></div>
+<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100%">
+<col width="86%" />
+<col width="*" />
+<tr valign="bottom">
+<td align="left"></td>
+<td align="center"><a href="using019.htm"><img src="./dcommon/gifs/leftnav.gif" alt="Previous" /><br />
+<span class="icon">Previous</span></a>&nbsp;</td>
+<td align="center"><a href="using021.htm"><img src="./dcommon/gifs/rightnav.gif" alt="Next" /><br />
+<span class="icon">Next</span></a></td>
+</tr>
+</table>
+<p><a id="BDHDFBBG" name="BDHDFBBG"></a></p>
+<div class="sect2">
+<h1>Working with the Instance List</h1>
+<a name="BEGIN" id="BEGIN"></a>
+<p>Once you have displayed a list of instances, you can select from a group of context menu commands to display it on the Instance relations tab or inspect it by using the Instance Inspector. You can also use the type of an instance and add that to the Type relations tab, list all instances for the type, list the largest arrays in the type, and trace the type allocations. This feature is useful once you've identified the instance and want to investigate it within the context of the type to which it belongs.</p>
+<p><span class="bold">To work with the Instance List:</span></p>
+<ol>
+<li>
+<p>Right-click the instance with which you want to work.</p>
+<p>The context menu appears.</p>
+</li>
+<li>
+<p>Select the command you want to execute, as described in <a href="#BDHCGGAB">Table: Working with the Instance List Context Menu</a>.</p>
+<div class="tblhruleformal"><a id="sthref19" name="sthref19"></a><a id="BDHCGGAB" name="BDHCGGAB"></a>
+<p class="titleintable">Working with the Instance List Context Menu</p>
+<table class="HRuleFormal" title="Working with the Instance List Context Menu" summary="This is a three-column table. The left-hand column lists tasks you can do from the menu; the middle column lists the sequence of coimmands to select from the menu to preform the task described in the left-hand column; and the right-hand column contains links to sections in this document that provide more information about the associated task described in the left-hand column." dir="ltr" border="1" width="100%" frame="hsides" rules="rows" cellpadding="3" cellspacing="0">
+<col width="*" />
+<col width="33%" />
+<col width="33%" />
+<thead>
+<tr align="left" valign="top">
+<th align="left" valign="bottom" id="r1c1-t8">To...</th>
+<th align="left" valign="bottom" id="r1c2-t8">Select this command...</th>
+<th align="left" valign="bottom" id="r1c3-t8">For more information, see...</th>
+</tr>
+</thead>
+<tbody>
+<tr align="left" valign="top">
+<td align="left" id="r2c1-t8" headers="r1c1-t8">
+<p>Display the instance on the Instance relations tab</p>
+</td>
+<td align="left" headers="r2c1-t8 r1c2-t8">
+<p><span class="bold">Add to Instance Graph</span></p>
+</td>
+<td align="left" headers="r2c1-t8 r1c3-t8">
+<p><a href="using012.htm#BDHDFIEB">"Studying Type References"</a></p>
+<br /></td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r3c1-t8" headers="r1c1-t8">
+<p>Inspect the instance</p>
+</td>
+<td align="left" headers="r3c1-t8 r1c2-t8">
+<p><span class="bold">Inspect Instance</span></p>
+</td>
+<td align="left" headers="r3c1-t8 r1c3-t8">
+<p><a href="using_instance.htm#i1070855">"Investigating an Instance"</a></p>
+<br /></td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r4c1-t8" headers="r1c1-t8">
+<p>Display the instance's type on the Type relations tab</p>
+</td>
+<td align="left" headers="r4c1-t8 r1c2-t8">
+<p><span class="bold">With Type</span> then <span class="bold">Add to Type Graph</span></p>
+</td>
+<td align="left" headers="r4c1-t8 r1c3-t8">
+<p><a href="using_references.htm#i1070947">"Investigating Type References"</a></p>
+<br /></td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r5c1-t8" headers="r1c1-t8">
+<p>List all instances of the selected instance's type</p>
+</td>
+<td align="left" headers="r5c1-t8 r1c2-t8">
+<p><span class="bold">With Type</span> then <span class="bold">List All Instances</span>.</p>
+</td>
+<td align="left" headers="r5c1-t8 r1c3-t8">
+<p><a href="using_instance.htm#i1070855">"Investigating an Instance"</a></p>
+<br /></td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r6c1-t8" headers="r1c1-t8">
+<p>To display just the largest arrays of the selected instance's type</p>
+</td>
+<td align="left" headers="r6c1-t8 r1c2-t8">
+<p><span class="bold">With Type</span> then <span class="bold">List Largest Arrays</span>.</p>
+</td>
+<td align="left" headers="r6c1-t8 r1c3-t8"><br /></td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r7c1-t8" headers="r1c1-t8">
+<p>To trace the allocation for the type associated with the selected instance</p>
+</td>
+<td align="left" headers="r7c1-t8 r1c2-t8">
+<p><span class="bold">With Type</span> the <span class="bold">Trace Allocations</span>.</p>
+</td>
+<td align="left" headers="r7c1-t8 r1c3-t8">
+<p><a href="using_stacktrace.htm#i1070860">"Viewing Allocation Stack Traces"</a></p>
+<br /></td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="tblhruleformal" --></li>
+</ol>
+</div>
+<!-- class="sect2" -->
+<!-- Start Footer -->
+<div class="footer">
+<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100%">
+<col width="86%" />
+<col width="*" />
+<tr>
+<td align="left"><span class="copyrightlogo">Copyright&nbsp;&copy;&nbsp;2001, 2011,&nbsp;Oracle&nbsp;and/or&nbsp;its&nbsp;affiliates.&nbsp;All&nbsp;rights&nbsp;reserved.</span><br />
+<a href="./dcommon/html/cpyr.htm"><span class="copyrightlogo">Legal Notices</span></a></td>
+<td align="center"><a href="using019.htm"><img src="./dcommon/gifs/leftnav.gif" alt="Previous" /><br />
+<span class="icon">Previous</span></a>&nbsp;</td>
+<td align="center"><a href="using021.htm"><img src="./dcommon/gifs/rightnav.gif" alt="Next" /><br />
+<span class="icon">Next</span></a></td>
+</tr>
+</table>
+</div>
+<!-- class="footer" -->
+</body>
+</html>

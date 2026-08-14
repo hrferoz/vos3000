@@ -1,0 +1,148 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=us-ascii" />
+<meta http-equiv="Content-Style-Type" content="text/css" />
+<meta http-equiv="Content-Script-Type" content="text/javascript" />
+<title>Studying Type References</title>
+<meta name="generator" content="Oracle DARB XHTML Converter (Mode = ohj/ohw) - Version 1.0.3" />
+<meta name="date" content="2011-07-13T23:48:0Z" />
+<meta name="robots" content="noarchive" />
+<meta name="doctitle" content="Studying Type References" />
+<meta name="relnum" content="Release 4.1" />
+<meta name="partnum" content="E21557-01" />
+<meta name="topic-id" content="MEMLK131" />
+<link rel="copyright" href="./dcommon/html/cpyr.htm" title="Copyright" type="text/html" />
+<link rel="stylesheet" href="./dcommon/css/blafdoc.css" title="Oracle BLAFDoc" type="text/css" />
+<link rel="contents" href="toc.htm" title="Contents" type="text/html" />
+<link rel="prev" href="using011.htm" title="Previous" type="text/html" />
+<link rel="next" href="using_instance.htm" title="Next" type="text/html" />
+</head>
+<body>
+<div class="zz-skip-header"><a href="#BEGIN">Skip Headers</a></div>
+<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100%">
+<col width="86%" />
+<col width="*" />
+<tr valign="bottom">
+<td align="left"></td>
+<td align="center"><a href="using011.htm"><img src="./dcommon/gifs/leftnav.gif" alt="Previous" /><br />
+<span class="icon">Previous</span></a>&nbsp;</td>
+<td align="center"><a href="using_instance.htm"><img src="./dcommon/gifs/rightnav.gif" alt="Next" /><br />
+<span class="icon">Next</span></a></td>
+</tr>
+</table>
+<p><a id="BDHDFIEB" name="BDHDFIEB"></a><a id="MEMLK131" name="MEMLK131"></a></p>
+<div class="sect2">
+<h1>Studying Type References</h1>
+<a name="BEGIN" id="BEGIN"></a>
+<p>Studying type references helps you get closer to the leaking object.</p>
+<div align="center">
+<div class="inftblnote"><br />
+<table class="Note oac_no_warn" summary="" cellpadding="3" cellspacing="0">
+<tbody>
+<tr>
+<td align="left">
+<p class="notep1">Note:</p>
+This procedure assumes you have selected the type from the Trend table and are viewing it on the Type relations tab, as described in <a href="using007.htm#BDHIFHGJ">"Trend Analysis Procedures"</a>.</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="inftblnote" --></div>
+<ol>
+<li>
+<p>Locate the reference where you suspect the link is occurring by using one of the techniques described in <a href="#BDHJIJHA">Table: Locating a Suspected Reference</a>:</p>
+<div class="tblhruleformal"><a id="sthref15" name="sthref15"></a><a id="BDHJIJHA" name="BDHJIJHA"></a>
+<p class="titleintable">Locating a Suspected Reference</p>
+<table class="HRuleFormal" title="Locating a Suspected Reference" summary="This is a two-cloumn decision table, The left-hand column describes possible outcomes for an action. The right-hand column describes the action to take to achieve the associated outcome." dir="ltr" border="1" width="100%" frame="hsides" rules="rows" cellpadding="3" cellspacing="0">
+<col width="39%" />
+<col width="*" />
+<thead>
+<tr align="left" valign="top">
+<th align="left" valign="bottom" id="r1c1-t6">To...</th>
+<th align="left" valign="bottom" id="r1c2-t6">Do this...</th>
+</tr>
+</thead>
+<tbody>
+<tr align="left" valign="top">
+<td align="left" id="r2c1-t6" headers="r1c1-t6">
+<p>Display referring nodes a few at time (recommended)</p>
+</td>
+<td align="left" headers="r2c1-t6 r1c2-t6">
+<ol>
+<li>
+<p>Locate the darkest-colored node.</p>
+</li>
+<li>
+<p>Click the plus sign at the left end of that node.</p>
+<p>A few nodes referring to that one will appear. The number of nodes that appear is configurable from the Preferences dialog box.</p>
+</li>
+<li>
+<p>Continue clicking the plus signs in the darkest colored nodes as they appear.</p>
+</li>
+</ol>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r3c1-t6" headers="r1c1-t6">
+<p>Display all referring nodes at once</p>
+</td>
+<td align="left" headers="r3c1-t6 r1c2-t6">
+<ol>
+<li>
+<p>Right-click the darkest-colored node.</p>
+<p>A context menu appears.</p>
+</li>
+<li>
+<p>Select <span class="bold">Expand All Nodes</span>.</p>
+<p>The node expands to show all referring nodes.</p>
+</li>
+</ol>
+</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="tblhruleformal" --></li>
+<li>
+<p>Right-click a node in which you suspect the leak is occurring (usually the one with the most data kept alive).</p>
+</li>
+<li>
+<p>Right-click the arrow between the two types where you suspect a leak.</p>
+<p>The arrow and the number under it are highlighted and a context menu appears.</p>
+</li>
+<li>
+<p>Select <span class="gui-object-action">List referring instances</span>.</p>
+<p>The Instance List appears to the left of the Type relations tab and shows the instances of the selected type. The instances shown will only be those that have references to the type indicated by the arrow from the selected type in the Type relations tab. If the list is too large, the Memory Leak Detector might time out when trying to display the list. You can change the time out setting under <span class="gui-object-action">Window</span> then <span class="gui-object-action">Preferences</span>.</p>
+<p>The column Data kept alive (bytes) shows how much data each instance keeps alive. This data currently cannot be garbage collected.</p>
+</li>
+</ol>
+<p><span class="bold">To investigate an instance of a type</span></p>
+<ol>
+<li>
+<p>Select <span class="gui-object-action">List All Instances</span>.</p>
+<p>The Instances List appears. See <a href="using_instance.htm#i1070855">"Investigating an Instance"</a> to continue the memory leak detection process.</p>
+</li>
+</ol>
+</div>
+<!-- class="sect2" -->
+<!-- class="sect1" -->
+<!-- Start Footer -->
+<div class="footer">
+<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100%">
+<col width="86%" />
+<col width="*" />
+<tr>
+<td align="left"><span class="copyrightlogo">Copyright&nbsp;&copy;&nbsp;2001, 2011,&nbsp;Oracle&nbsp;and/or&nbsp;its&nbsp;affiliates.&nbsp;All&nbsp;rights&nbsp;reserved.</span><br />
+<a href="./dcommon/html/cpyr.htm"><span class="copyrightlogo">Legal Notices</span></a></td>
+<td align="center"><a href="using011.htm"><img src="./dcommon/gifs/leftnav.gif" alt="Previous" /><br />
+<span class="icon">Previous</span></a>&nbsp;</td>
+<td align="center"><a href="using_instance.htm"><img src="./dcommon/gifs/rightnav.gif" alt="Next" /><br />
+<span class="icon">Next</span></a></td>
+</tr>
+</table>
+</div>
+<!-- class="footer" -->
+</body>
+</html>

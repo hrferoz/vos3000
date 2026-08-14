@@ -1,0 +1,45 @@
+Manifest-Version: 1.0
+Ant-Version: Apache Ant 1.8.2
+Created-By: 1.6.0_20-b02 (Sun Microsystems Inc.)
+Require-Bundle: com.jrockit.mc.common;visibility:="reexport";bundle-ve
+ rsion="[4.1.0,5.0.0)",com.jrockit.mc.jdp.client;bundle-version="[4.1.
+ 0,5.0.0)",com.jrockit.mc.rmp;bundle-version="[4.1.0,5.0.0)"
+Export-Package: com.jrockit.mc.rjmx,com.jrockit.mc.rjmx.flr,com.jrocki
+ t.mc.rjmx.internal; x-friends:="com.jrockit.mc.console.ui,  com.jrock
+ it.mc.rjmx.core,  com.jrockit.mc.browser.jdp,  com.jrockit.mc.console
+ .ui.notification,  com.jrockit.mc.rjmx.mockup.test,  com.jrockit.mc.c
+ onsole.historicaldata,  com.jrockit.mc.rcp.application,  com.jrockit.
+ mc.rjmx.mockup,  com.jrockit.mc.test,  com.jrockit.mc.browser,  com.j
+ rockit.mc.browser.attach,  com.jrockit.mc.license.test,  com.jrockit.
+ mc.console.ui.information,  com.jrockit.mc.flightrecorder.controlpane
+ l.ui,  com.jrockit.mc.memleak.ui,  com.jrockit.mc.dtrace.ui",com.jroc
+ kit.mc.rjmx.notification,com.jrockit.mc.rjmx.notification.internal;x-
+ friends:="com.jrockit.mc.console.ui.notification,com.jrockit.mc.rjmx.
+ core,com.jrockit.mc.alert",com.jrockit.mc.rjmx.persistence.internal; 
+ x-friends:="com.jrockit.mc.rjmx.core,  com.jrockit.mc.console.headles
+ s,  com.jrockit.mc.console.historicaldata,  com.jrockit.mc.console.ui
+ ,  com.jrockit.mc.rjmx.ui",com.jrockit.mc.rjmx.proxy,com.jrockit.mc.r
+ jmx.proxy.internal; x-friends:="com.jrockit.mc.rjmx.core,  com.jrocki
+ t.mc.jra.ui,  com.jrockit.mc.license.test,  com.jrockit.mc.test",com.
+ jrockit.mc.rjmx.security,com.jrockit.mc.rjmx.subscription,com.jrockit
+ .mc.rjmx.subscription.internal; x-friends:="com.jrockit.mc.rjmx.core,
+   com.jrockit.mc.console.ui,  com.jrockit.mc.rjmx.ui,  com.jrockit.mc
+ .test,  com.jrockit.mc.console.ui.mbeanbrowser,  com.jrockit.mc.conso
+ le.historicaldata,  com.jrockit.mc.console.ui.nativememory,  com.jroc
+ kit.mc.console.ext.coherence",com.jrockit.mc.rjmx.subscription.storag
+ e.internal; x-friends:="com.jrockit.mc.console.ui,  com.jrockit.mc.co
+ nsole.headless,  com.jrockit.mc.rjmx.services,  com.jrockit.mc.rjmx.u
+ i",com.jrockit.mc.rjmx.xml.internal;x-friends:="com.jrockit.mc.consol
+ e.ui,com.jrockit.mc.browser,com.jrockit.mc.rjmx.ui",javax.mail,javax.
+ mail.event,javax.mail.internet,javax.mail.search,jrockit.management,j
+ rockit.management.util
+Bundle-Vendor: Oracle
+Bundle-ActivationPolicy: lazy
+Bundle-ClassPath: rjmx.jar,lib/jlmext.jar,lib/activation.jar,lib/mail.
+ jar
+Bundle-Version: 4.1.0.147304
+Bundle-Name: RJMX Plug-in
+Bundle-ManifestVersion: 2
+Bundle-SymbolicName: com.jrockit.mc.rjmx;singleton:=true
+Bundle-RequiredExecutionEnvironment: J2SE-1.5
+

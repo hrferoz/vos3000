@@ -1,0 +1,27 @@
+<contexts>
+	<context id="graph" title="Instance Graph">
+		<description>Investigating an Instance</description>
+		<topic href="html/using_instance.htm#i1070855" label="Investigating an Instance">
+			<topic href="html/using013.htm#BDHIDFGE" label="Displaying Instances" />
+			<topic href="html/using014.htm#BDHEDGHB" label="Finding the Garbage Collection Root" />
+			<topic href="html/using015.htm#BDHCGCJH" label="Removing Instances from the Instance Relations Tab" />
+		</topic>
+	</context>
+	<context id="tree" title="Instance Tree">
+		<description>Investigating an Instance</description>
+		<topic href="html/using_instance.htm#i1070855" label="Investigating an Instance">
+			<topic href="html/using013.htm#BDHIDFGE" label="Displaying Instances" />
+			<topic href="html/using014.htm#BDHEDGHB" label="Finding the Garbage Collection Root" />
+			<topic href="html/using015.htm#BDHCGCJH" label="Removing Instances from the Instance Relations Tab" />
+		</topic>
+	</context>
+	<context id="list" title="Instance List">
+		<description>Using the Instance List</description>
+		<topic href="html/using017.htm#BDHJDJIC" label="Using the Instance List">
+			<topic href="html/using018.htm#BDHBDCDJ" label="Understanding the Instance List" />
+			<topic href="html/using019.htm#BDHJAFEE" label="Opening the Instance List" />
+			<topic href="html/using020.htm#BDHDFBBG" label="Working with the Instance List" />
+			<topic href="html/using021.htm#sthref20" label="Configuring the Instance List" />
+		</topic>
+	</context>
+</contexts>

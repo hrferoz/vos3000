@@ -1,0 +1,69 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=us-ascii" />
+<meta http-equiv="Content-Style-Type" content="text/css" />
+<meta http-equiv="Content-Script-Type" content="text/javascript" />
+<title>Studying Heap Usage in Verbose Outputs</title>
+<meta name="generator" content="Oracle DARB XHTML Converter (Mode = ohj/ohw) - Version 1.0.3" />
+<meta name="date" content="2011-07-13T23:47:57Z" />
+<meta name="robots" content="noarchive" />
+<meta name="doctitle" content="Studying Heap Usage in Verbose Outputs" />
+<meta name="relnum" content="Release 4.1" />
+<meta name="partnum" content="E21557-01" />
+<meta name="topic-id" content="MEMLK105" />
+<link rel="copyright" href="./dcommon/html/cpyr.htm" title="Copyright" type="text/html" />
+<link rel="stylesheet" href="./dcommon/css/blafdoc.css" title="Oracle BLAFDoc" type="text/css" />
+<link rel="contents" href="toc.htm" title="Contents" type="text/html" />
+<link rel="prev" href="gettingstart_spotting.htm" title="Previous" type="text/html" />
+<link rel="next" href="getting_started002.htm" title="Next" type="text/html" />
+</head>
+<body>
+<div class="zz-skip-header"><a href="#BEGIN">Skip Headers</a></div>
+<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100%">
+<col width="86%" />
+<col width="*" />
+<tr valign="bottom">
+<td align="left"></td>
+<td align="center"><a href="gettingstart_spotting.htm"><img src="./dcommon/gifs/leftnav.gif" alt="Previous" /><br />
+<span class="icon">Previous</span></a>&nbsp;</td>
+<td align="center"><a href="getting_started002.htm"><img src="./dcommon/gifs/rightnav.gif" alt="Next" /><br />
+<span class="icon">Next</span></a></td>
+</tr>
+</table>
+<p><a id="i1073517" name="i1073517"></a><a id="MEMLK105" name="MEMLK105"></a></p>
+<div class="sect2">
+<h1>Studying Heap Usage in Verbose Outputs</h1>
+<a name="BEGIN" id="BEGIN"></a>
+<p>An early sign of a memory leak in a Java application is increasing heap usage. An old space garbage collection (old collection) removes all unused objects from the heap. Normally, the heap usage after each old collection should be fairly constant over time, but if the application erroneously keeps more and more objects alive, the heap usage after old collections increases for each garbage collection.</p>
+<p>A simple way to monitor the heap usage is to view verbose garbage collection outputs. To do this, you simply start the JRockit JVM with the <code>-Xverbose:gc</code> option and then watch the output for a while, as shown in this output example:</p>
+<pre xml:space="preserve" class="oac_no_warn">
+</pre>
+<br />
+<code>[memory ] 2.703-2.729: GC 262144K-&gt;3904K (262144K), 25.857 ms</code><br />
+<code>[memory ] 3.901-3.940: GC 262144K-&gt;10820K (262144K), 38.835 ms</code><br />
+<code>[memory ] 4.857-4.913: GC 262144K-&gt;19606K (262144K), 56.011 ms</code><br />
+<code>[memory ] 5.780-5.878: GC 262144K-&gt;28424K (262144K), 97.406 ms</code>
+<p>The value after the arrow (<code>-&gt;</code>) is the heap usage after the garbage collection. The preceding example contains only old collections. You can clearly see that the heap usage after garbage collections is constantly growing in this example.</p>
+<p>This is however a cumbersome way to monitor heap usage over longer period of time. The Management Console provides graphical tools for monitoring the heap usage over time, as described in <a href="getting_started002.htm#i1072886">"Studying Heap Usage in the Management Console"</a>.</p>
+</div>
+<!-- class="sect2" -->
+<!-- Start Footer -->
+<div class="footer">
+<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100%">
+<col width="86%" />
+<col width="*" />
+<tr>
+<td align="left"><span class="copyrightlogo">Copyright&nbsp;&copy;&nbsp;2001, 2011,&nbsp;Oracle&nbsp;and/or&nbsp;its&nbsp;affiliates.&nbsp;All&nbsp;rights&nbsp;reserved.</span><br />
+<a href="./dcommon/html/cpyr.htm"><span class="copyrightlogo">Legal Notices</span></a></td>
+<td align="center"><a href="gettingstart_spotting.htm"><img src="./dcommon/gifs/leftnav.gif" alt="Previous" /><br />
+<span class="icon">Previous</span></a>&nbsp;</td>
+<td align="center"><a href="getting_started002.htm"><img src="./dcommon/gifs/rightnav.gif" alt="Next" /><br />
+<span class="icon">Next</span></a></td>
+</tr>
+</table>
+</div>
+<!-- class="footer" -->
+</body>
+</html>

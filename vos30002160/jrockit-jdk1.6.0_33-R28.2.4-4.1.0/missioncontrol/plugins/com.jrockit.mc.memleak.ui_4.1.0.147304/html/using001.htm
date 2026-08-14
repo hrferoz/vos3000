@@ -1,0 +1,316 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=us-ascii" />
+<meta http-equiv="Content-Style-Type" content="text/css" />
+<meta http-equiv="Content-Script-Type" content="text/javascript" />
+<title>Memory Leak Detector Tool Bar</title>
+<meta name="generator" content="Oracle DARB XHTML Converter (Mode = ohj/ohw) - Version 1.0.3" />
+<meta name="date" content="2011-07-13T23:47:58Z" />
+<meta name="robots" content="noarchive" />
+<meta name="doctitle" content="Memory Leak Detector Tool Bar" />
+<meta name="relnum" content="Release 4.1" />
+<meta name="partnum" content="E21557-01" />
+<meta name="topic-id" content="MEMLK118" />
+<link rel="copyright" href="./dcommon/html/cpyr.htm" title="Copyright" type="text/html" />
+<link rel="stylesheet" href="./dcommon/css/blafdoc.css" title="Oracle BLAFDoc" type="text/css" />
+<link rel="contents" href="toc.htm" title="Contents" type="text/html" />
+<link rel="prev" href="using_getfamiliar.htm" title="Previous" type="text/html" />
+<link rel="next" href="using002.htm" title="Next" type="text/html" />
+</head>
+<body>
+<div class="zz-skip-header"><a href="#BEGIN">Skip Headers</a></div>
+<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100%">
+<col width="86%" />
+<col width="*" />
+<tr valign="bottom">
+<td align="left"></td>
+<td align="center"><a href="using_getfamiliar.htm"><img src="./dcommon/gifs/leftnav.gif" alt="Previous" /><br />
+<span class="icon">Previous</span></a>&nbsp;</td>
+<td align="center"><a href="using002.htm"><img src="./dcommon/gifs/rightnav.gif" alt="Next" /><br />
+<span class="icon">Next</span></a></td>
+</tr>
+</table>
+<p><a id="i1072950" name="i1072950"></a><a id="MEMLK118" name="MEMLK118"></a></p>
+<div class="sect2">
+<h1>Memory Leak Detector Tool Bar</h1>
+<a name="BEGIN" id="BEGIN"></a>
+<p><a href="#BDHHGBDE">Table: Memory Leak Detector Tool Bar icons</a> describes the different tools in the toolbar.</p>
+<div class="tblhruleformal"><a id="sthref10" name="sthref10"></a><a id="BDHHGBDE" name="BDHHGBDE"></a>
+<p class="titleintable">Memory Leak Detector Tool Bar icons</p>
+<table class="HRuleFormal" title="Memory Leak Detector Tool Bar icons" summary="Table 1 is a three-column description table that shows the toolbar icons in the left column, describes those icons in the middlecolumn, and identifies the tabs on which the icons appear in the right column. ." dir="ltr" border="1" width="100%" frame="hsides" rules="rows" cellpadding="3" cellspacing="0">
+<col width="8%" />
+<col width="*" />
+<col width="23%" />
+<thead>
+<tr align="left" valign="top">
+<th align="left" valign="bottom" id="r1c1-t2">Tool</th>
+<th align="left" valign="bottom" id="r1c2-t2">Description</th>
+<th align="left" valign="bottom" id="r1c3-t2">Used On</th>
+</tr>
+</thead>
+<tbody>
+<tr align="left" valign="top">
+<td align="left" id="r2c1-t2" headers="r1c1-t2">
+<p><img src="img/joinclasses.gif" alt="Two overlapping circles followed by two dots" title="Two overlapping circles followed by two dots" /></p>
+<br /></td>
+<td align="left" headers="r2c1-t2 r1c2-t2">
+<p>The join classes button for trend analysis. Clicking this button joins all classes of the same name into one entry, regardless of the class loader that loaded the individual class.</p>
+</td>
+<td align="left" headers="r2c1-t2 r1c3-t2">
+<p>Trend tab</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r3c1-t2" headers="r1c1-t2">
+<p><img src="img/splitclasses.gif" alt="Two rows, letter C and two dots on each" title="Two rows, letter C and two dots on each" /></p>
+<br /></td>
+<td align="left" headers="r3c1-t2 r1c2-t2">
+<p>The split classes button for trend analysis. Clicking this button splits all classes of the same name but with different class loaders into separate entries.</p>
+</td>
+<td align="left" headers="r3c1-t2 r1c3-t2">
+<p>Trend tab</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r4c1-t2" headers="r1c1-t2">
+<p><img src="img/reset_delta.gif" alt="Depicts letter A, equals sign, and a zero" title="Depicts letter A, equals sign, and a zero" /></p>
+<br /></td>
+<td align="left" headers="r4c1-t2 r1c2-t2">
+<p>The Reset button. Resets the instance count delta and size delta for trend analysis.</p>
+</td>
+<td align="left" headers="r4c1-t2 r1c3-t2">
+<p>Trend tab</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r5c1-t2" headers="r1c1-t2"><img src="img/refresh.gif" alt="Two arrows pointing in opposite directions" title="Two arrows pointing in opposite directions" /><br /></td>
+<td align="left" headers="r5c1-t2 r1c2-t2">
+<p>The Refresh button. Refreshes the tree/table.</p>
+</td>
+<td align="left" headers="r5c1-t2 r1c3-t2">
+<p>Trend tab</p>
+<p>Allocation Tab</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r6c1-t2" headers="r1c1-t2">
+<p><img src="img/pause_continue.gif" alt="Two vertical, parallel bars" title="Two vertical, parallel bars" /></p>
+<br /></td>
+<td align="left" headers="r6c1-t2 r1c2-t2">
+<p>The Pause button. Pauses updating the tree/table, but continues analysis in the background.</p>
+</td>
+<td align="left" headers="r6c1-t2 r1c3-t2">
+<p>Trend tab</p>
+<p>Allocation tab</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r7c1-t2" headers="r1c1-t2"><img src="img/joinnewclasses.gif" alt="Overlapped circled C&rsquo;s with plus sign above square" title="Overlapped circled C&rsquo;s with plus sign above square" /><br /></td>
+<td align="left" headers="r7c1-t2 r1c2-t2">
+<p>The join classes button on the Type relations tab. When this button is selected, new nodes are created only with regards to the class name and regardless of the class loader that loaded the individual class.</p>
+</td>
+<td align="left" headers="r7c1-t2 r1c3-t2">
+<p>Type relations tab</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r8c1-t2" headers="r1c1-t2">
+<p><img src="img/splitnewclasses.gif" alt="Depicts plus sign above cirlced C above square." title="Depicts plus sign above cirlced C above square." /></p>
+<br /></td>
+<td align="left" headers="r8c1-t2 r1c2-t2">
+<p>The split classes button on the Type relations tab. When this button is selected, new nodes are created for each individual class, even if they have the same class name.</p>
+</td>
+<td align="left" headers="r8c1-t2 r1c3-t2">
+<p>Type relations tab</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r9c1-t2" headers="r1c1-t2"><img src="img/garbage.gif" alt="Depicts garbage can." title="Depicts garbage can." /><br /></td>
+<td align="left" headers="r9c1-t2 r1c2-t2">
+<p>The garbage collection button. Clicking this button performs garbage collection on the server.</p>
+</td>
+<td align="left" headers="r9c1-t2 r1c3-t2">
+<p>All tabs</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r10c1-t2" headers="r1c1-t2">
+<p><img src="img/tablelayout_button.gif" alt="Depicts empty chart containing lines and columns." title="Depicts empty chart containing lines and columns." /></p>
+<br /></td>
+<td align="left" headers="r10c1-t2 r1c2-t2">
+<p>The table layout button. Clicking this button displays the Table Layout dialog box.</p>
+</td>
+<td align="left" headers="r10c1-t2 r1c3-t2">
+<p>Trend tab</p>
+<p>Allocation tab</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r11c1-t2" headers="r1c1-t2">
+<p><img src="img/start_button.gif" alt="Depicts arrowhead pointing to the right." title="Depicts arrowhead pointing to the right." /></p>
+<br /></td>
+<td align="left" headers="r11c1-t2 r1c2-t2">
+<p>The start button. Clicking this button starts trend analysis or allocation tracing.</p>
+</td>
+<td align="left" headers="r11c1-t2 r1c3-t2">
+<p>Trend tab</p>
+<p>Allocation tab</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r12c1-t2" headers="r1c1-t2">
+<p><img src="img/stop_button.gif" alt="Depicts filled square." title="Depicts filled square." /></p>
+<br /></td>
+<td align="left" headers="r12c1-t2 r1c2-t2">
+<p>The stop button. Clicking this button stops the trend analysis or allocation tracing</p>
+</td>
+<td align="left" headers="r12c1-t2 r1c3-t2">
+<p>Trend tab</p>
+<p>Allocation tab</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r13c1-t2" headers="r1c1-t2">
+<p><img src="img/zoomin_button.gif" alt="Depicts magnifying glass over plus sign." title="Depicts magnifying glass over plus sign." /></p>
+<br /></td>
+<td align="left" headers="r13c1-t2 r1c2-t2">
+<p>The zoom-in button. Clicking this button enlarges the image in the graph, showing more detail for fewer nodes; in effect, it zooms in to the image.</p>
+</td>
+<td align="left" headers="r13c1-t2 r1c3-t2">
+<p>Type relations tab</p>
+<p>Instance relations tab</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r14c1-t2" headers="r1c1-t2">
+<p><img src="img/zoomout_button.gif" alt="Depicts a magnifying glass over a minus sign." title="Depicts a magnifying glass over a minus sign." /></p>
+<br /></td>
+<td align="left" headers="r14c1-t2 r1c2-t2">
+<p>The zoom-out button. Clicking this button reduces the image in the graph, showing more nodes; in effect, it zooms out of the image.</p>
+</td>
+<td align="left" headers="r14c1-t2 r1c3-t2">
+<p>Type relations tab</p>
+<p>Instance relations tab</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r15c1-t2" headers="r1c1-t2">
+<p><img src="img/zoomto100_button.gif" alt="Depicts a magnifying glass over the text 1:1." title="Depicts a magnifying glass over the text 1:1." /></p>
+<br /></td>
+<td align="left" headers="r15c1-t2 r1c2-t2">
+<p>The zoom to 100% button. Clicking this button restores the image in the graph to its original size.</p>
+</td>
+<td align="left" headers="r15c1-t2 r1c3-t2">
+<p>Type relations tab</p>
+<p>Instance relations tab</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r16c1-t2" headers="r1c1-t2">
+<p><img src="img/zoomtofit_button.gif" alt="Magnifying glass surrounded by four arrowheads pointing out." title="Magnifying glass surrounded by four arrowheads pointing out." /></p>
+<br /></td>
+<td align="left" headers="r16c1-t2 r1c2-t2">
+<p>The zoom-to-fit. Clicking this resizes and repositions the image in the graph so that all nodes appear on the graph.</p>
+</td>
+<td align="left" headers="r16c1-t2 r1c3-t2">
+<p>Type relations tab</p>
+<p>Instance relations tab</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r17c1-t2" headers="r1c1-t2">
+<p><img src="img/layoutgraph_button.gif" alt="Depicts wand over flowchart." title="Depicts wand over flowchart." /></p>
+<br /></td>
+<td align="left" headers="r17c1-t2 r1c2-t2">
+<p>The layout graph button. Clicking this button allows you to refresh the layout of the graph.</p>
+</td>
+<td align="left" headers="r17c1-t2 r1c3-t2">
+<p>Type relations tab</p>
+<p>Instance relations tab</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r18c1-t2" headers="r1c1-t2">
+<p><img src="img/cleargraphbutton.gif" alt="Graph overlayed by an X" title="Graph overlayed by an X" /></p>
+<br /></td>
+<td align="left" headers="r18c1-t2 r1c2-t2">
+<p>The clear graph button. Clicking this button removes all nodes from the graph.</p>
+</td>
+<td align="left" headers="r18c1-t2 r1c3-t2">
+<p>Type relations tab</p>
+<p>Instance relations tab</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r19c1-t2" headers="r1c1-t2">
+<p><img src="img/tree_to_graph.gif" alt="Depicts file tree" title="Depicts file tree" /></p>
+<br /></td>
+<td align="left" headers="r19c1-t2 r1c2-t2">
+<p>The tree-to-graph toggle. Toggles from the graph view to the tree view. This tool only appears when the graph view is displayed.</p>
+</td>
+<td align="left" headers="r19c1-t2 r1c3-t2">
+<p>Type relations tab</p>
+<p>Instance relations tab</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r20c1-t2" headers="r1c1-t2">
+<p><img src="img/graph_to_tree.gif" alt="Depicts horizontal flow chart" title="Depicts horizontal flow chart" /></p>
+<br /></td>
+<td align="left" headers="r20c1-t2 r1c2-t2">
+<p>The graph-to-tree toggle. Toggles from the tree view to the graph view. This tool only appears when the tree view is displayed</p>
+</td>
+<td align="left" headers="r20c1-t2 r1c3-t2">
+<p>Type relations tab</p>
+<p>Instance relations tab</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r21c1-t2" headers="r1c1-t2">
+<p><img src="img/exportgraph.gif" alt="two overlapped images and arcing arrow connecting them." title="two overlapped images and arcing arrow connecting them." /></p>
+<br /></td>
+<td align="left" headers="r21c1-t2 r1c2-t2">
+<p>The export graph button. Clicking this button allows you to export the displayed graph to an image file.</p>
+</td>
+<td align="left" headers="r21c1-t2 r1c3-t2">
+<p>Type relations tab</p>
+<p>Instance relations tab</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r22c1-t2" headers="r1c1-t2">
+<p><img src="img/print_button.gif" alt="Depicts computer printer." title="Depicts computer printer." /></p>
+<br /></td>
+<td align="left" headers="r22c1-t2 r1c2-t2">
+<p>The print graph button. Clicking this button prints the graph.</p>
+</td>
+<td align="left" headers="r22c1-t2 r1c3-t2">
+<p>Type relations tab</p>
+<p>Instance relations tab</p>
+</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="tblhruleformal" --></div>
+<!-- class="sect2" -->
+<!-- Start Footer -->
+<div class="footer">
+<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100%">
+<col width="86%" />
+<col width="*" />
+<tr>
+<td align="left"><span class="copyrightlogo">Copyright&nbsp;&copy;&nbsp;2001, 2011,&nbsp;Oracle&nbsp;and/or&nbsp;its&nbsp;affiliates.&nbsp;All&nbsp;rights&nbsp;reserved.</span><br />
+<a href="./dcommon/html/cpyr.htm"><span class="copyrightlogo">Legal Notices</span></a></td>
+<td align="center"><a href="using_getfamiliar.htm"><img src="./dcommon/gifs/leftnav.gif" alt="Previous" /><br />
+<span class="icon">Previous</span></a>&nbsp;</td>
+<td align="center"><a href="using002.htm"><img src="./dcommon/gifs/rightnav.gif" alt="Next" /><br />
+<span class="icon">Next</span></a></td>
+</tr>
+</table>
+</div>
+<!-- class="footer" -->
+</body>
+</html>

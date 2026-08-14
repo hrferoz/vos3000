@@ -1,0 +1,141 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=us-ascii" />
+<meta http-equiv="Content-Style-Type" content="text/css" />
+<meta http-equiv="Content-Script-Type" content="text/javascript" />
+<title>Customization Procedures</title>
+<meta name="generator" content="Oracle DARB XHTML Converter (Mode = ohj/ohw) - Version 1.0.3" />
+<meta name="date" content="2011-07-13T23:48:1Z" />
+<meta name="robots" content="noarchive" />
+<meta name="doctitle" content="Customization Procedures" />
+<meta name="relnum" content="Release 4.1" />
+<meta name="partnum" content="E21557-01" />
+<meta name="topic-id" content="MEMLK140" />
+<link rel="copyright" href="./dcommon/html/cpyr.htm" title="Copyright" type="text/html" />
+<link rel="stylesheet" href="./dcommon/css/blafdoc.css" title="Oracle BLAFDoc" type="text/css" />
+<link rel="contents" href="toc.htm" title="Contents" type="text/html" />
+<link rel="prev" href="using_customizing.htm" title="Previous" type="text/html" />
+</head>
+<body>
+<div class="zz-skip-header"><a href="#BEGIN">Skip Headers</a></div>
+<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100%">
+<col width="86%" />
+<col width="*" />
+<tr valign="bottom">
+<td align="left"></td>
+<td align="center"><a href="using_customizing.htm"><img src="./dcommon/gifs/leftnav.gif" alt="Previous" /><br />
+<span class="icon">Previous</span></a>&nbsp;</td>
+</tr>
+</table>
+<p><a id="MEMLK140" name="MEMLK140"></a></p>
+<div class="sect2"><a id="sthref21" name="sthref21"></a>
+<h1>Customization Procedures</h1>
+<a name="BEGIN" id="BEGIN"></a>
+<p>This topic describes the preferences you can set for the Memory Leak Detector.</p>
+<p><span class="bold">To open the preferences window for the Memory Leak Detector:</span></p>
+<ul>
+<li>
+<p>Choose <span class="gui-object-action">Window</span> then <span class="gui-object-action">Preferences</span></p>
+<p>The Preferences window opens.</p>
+</li>
+<li>
+<p>In the Preferences window, choose <span class="gui-object-action">JRockit Mission Control</span> then <span class="gui-object-action">Memory Leak Detector</span>.</p>
+</li>
+</ul>
+<p><span class="bold">Communication Settings</span></p>
+<p>You can choose between the following communication options for TCP port of the Memory Leak Protocol (MLP):</p>
+<ul>
+<li>
+<p>Let OS choose</p>
+<p>The communication settings are configured by the operating system. This is a convenient choice if you are not sitting behind a firewall.</p>
+</li>
+<li>
+<p>Use fixed port</p>
+<p>You specify the communication port manually. Use this when you are running one JRockit JVM behind a firewall.</p>
+</li>
+<li>
+<p>Use port relative to JMX port</p>
+<p>Use this option when you are running several JVMs on the same computer and the computer is behind a firewall. Select an offset (a number between 1 and 65535) that will be added to the JMX port (wrapping around if needed) and used as the TCP port for the MLP communication.</p>
+</li>
+</ul>
+<p><span class="bold">Graphs Settings</span></p>
+<p>You can set the following options for graphs in the Memory Leak Detector:</p>
+<ul>
+<li>
+<p>Animate layouts</p>
+<p>When selected, animates the expansion of a node on the Type relations tab and the Instance relations tab.</p>
+</li>
+<li>
+<p>Automatically center the last expanded node</p>
+<p>When selected, centers a type in the viewing area for the Type relations tab and the Instance relations tab.</p>
+</li>
+<li>
+<p>Number of referred nodes to add when a node is expanded</p>
+<p>When set, controls how many nodes you want to be displayed in the Types tab and Instances tab when clicking the plus sign. If you specify a very high number, the view can become cluttered.</p>
+</li>
+<li>
+<p>Show fully qualified class names in graph nodes</p>
+<p>When selected, displays the complete class name in the graphs of the Type relations tab and the Instance relations tab.</p>
+</li>
+</ul>
+<p><span class="bold">Instance Limits</span></p>
+<p>You can set the following limits for instance navigation and analysis:</p>
+<ul>
+<li>
+<p>The maximum number of array elements to show, before grouping into ranges</p>
+<p>In the Instance Inspector, if an array has more elements than this number (100 by default), the elements will be grouped into ranges, for example [0 ... 99], that can be individually expanded to show the actual array elements. (In addition, for very large arrays, if the number of grouped ranges becomes larger than this, they will be grouped into an additional level, for example [0 ... 9999], and so on.)</p>
+</li>
+<li>
+<p>Maximum depth to search for a GC root</p>
+<p>This is the maximum number of backward steps that will be taken to find a garbage collection root when selecting <span class="bold">Expand To Root</span>. If no root is found within this limit, no node expansion will be performed.</p>
+</li>
+<li>
+<p>Maximum number of instances to list for a single type</p>
+<p>Use this value to set the number of instances you want to list when selecting <span class="bold">List All Instances</span> of a type.</p>
+</li>
+<li>
+<p>Maximum number of instances to list for relations between two types</p>
+<p>Use this value to set the number of instances you want to list when selecting <span class="bold">List referring instances</span> on a type relation.</p>
+</li>
+<li>
+<p>Maximum keep alive size to trace, in bytes</p>
+<p>The Memory Leak Detector counts the amount of data kept alive by any given object until it reaches this value.</p>
+</li>
+<li>
+<p>Timeout in seconds for any instance operation</p>
+<p>This value limits the extra time used, beyond the time required by any garbage collector phases, for finding a path to root or instances that participate in a type relation. If the timeout expires, a partial result may be shown, depending on the operation.</p>
+</li>
+</ul>
+<p><span class="bold">Trend Settings</span></p>
+<p>You can set the following properties for the Trend tab:</p>
+<ul>
+<li>
+<p>Lowest heap usage to report.</p>
+<p>Specifies the minimum ratio of the heap that a type should occupy for it to be reported in the trend table. Types whose total size occupy less than this ratio of the total heap will be ignored. Specify zero to see all types.</p>
+</li>
+<li>
+<p>Trend refresh interval.</p>
+<p>Specifies the maximum time in seconds between updates to the trend table. The trend table may be updated more frequently, since garbage collections always update the trend table. This setting does not affect the growth rate calculation accuracy.</p>
+</li>
+</ul>
+</div>
+<!-- class="sect2" -->
+<!-- class="sect1" -->
+<!-- Start Footer -->
+<div class="footer">
+<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100%">
+<col width="86%" />
+<col width="*" />
+<tr>
+<td align="left"><span class="copyrightlogo">Copyright&nbsp;&copy;&nbsp;2001, 2011,&nbsp;Oracle&nbsp;and/or&nbsp;its&nbsp;affiliates.&nbsp;All&nbsp;rights&nbsp;reserved.</span><br />
+<a href="./dcommon/html/cpyr.htm"><span class="copyrightlogo">Legal Notices</span></a></td>
+<td align="center"><a href="using_customizing.htm"><img src="./dcommon/gifs/leftnav.gif" alt="Previous" /><br />
+<span class="icon">Previous</span></a>&nbsp;</td>
+</tr>
+</table>
+</div>
+<!-- class="footer" -->
+</body>
+</html>

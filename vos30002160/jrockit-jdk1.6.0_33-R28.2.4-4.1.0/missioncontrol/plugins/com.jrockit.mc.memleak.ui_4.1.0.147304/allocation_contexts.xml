@@ -1,0 +1,6 @@
+<contexts>
+	<context id="traces" title="Trace Allocation">
+		<description>Viewing Allocation Stack Traces</description>
+		<topic href="html/using_stacktrace.htm#i1070860" label="Viewing Allocation Stack Traces" />
+	</context>
+</contexts>

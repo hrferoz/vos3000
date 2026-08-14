@@ -1,0 +1,154 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=us-ascii" />
+<meta http-equiv="Content-Style-Type" content="text/css" />
+<meta http-equiv="Content-Script-Type" content="text/javascript" />
+<title>Analyzing Live Set Trends</title>
+<meta name="generator" content="Oracle DARB XHTML Converter (Mode = ohj/ohw) - Version 1.0.3" />
+<meta name="date" content="2011-07-13T23:48:0Z" />
+<meta name="robots" content="noarchive" />
+<meta name="doctitle" content="Analyzing Live Set Trends" />
+<meta name="relnum" content="Release 4.1" />
+<meta name="partnum" content="E21557-01" />
+<meta name="topic-id" content="MEMLK124" />
+<link rel="copyright" href="./dcommon/html/cpyr.htm" title="Copyright" type="text/html" />
+<link rel="stylesheet" href="./dcommon/css/blafdoc.css" title="Oracle BLAFDoc" type="text/css" />
+<link rel="contents" href="toc.htm" title="Contents" type="text/html" />
+<link rel="prev" href="using002.htm" title="Previous" type="text/html" />
+<link rel="next" href="using003.htm" title="Next" type="text/html" />
+</head>
+<body>
+<div class="zz-skip-header"><a href="#BEGIN">Skip Headers</a></div>
+<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100%">
+<col width="86%" />
+<col width="*" />
+<tr valign="bottom">
+<td align="left"></td>
+<td align="center"><a href="using002.htm"><img src="./dcommon/gifs/leftnav.gif" alt="Previous" /><br />
+<span class="icon">Previous</span></a>&nbsp;</td>
+<td align="center"><a href="using003.htm"><img src="./dcommon/gifs/rightnav.gif" alt="Next" /><br />
+<span class="icon">Next</span></a></td>
+</tr>
+</table>
+<p><a id="i1070111" name="i1070111"></a><a id="MEMLK124" name="MEMLK124"></a></p>
+<div class="sect1">
+<h1>Analyzing Live Set Trends</h1>
+<a name="BEGIN" id="BEGIN"></a>
+<p>From the Trend tab, start analyzing your application. The types with the highest growth in bytes per second are marked red (darkest) in the Trend Analysis table and they are listed at the top of the table. For each update, the list might change according to the current object allocation and garbage collection rates.</p>
+<p><a href="#BDHBFFFB">Table: Trend Tab Description</a> describes the <span class="bold">Trend</span> <span class="bold">tab</span> columns.</p>
+<div class="tblhruleformal"><a id="sthref12" name="sthref12"></a><a id="BDHBFFFB" name="BDHBFFFB"></a>
+<p class="titleintable">Trend Tab Description</p>
+<table class="HRuleFormal" title="Trend Tab Description" summary="Table 3 is a two-column definiton table that explains the data columns on the Trend Analysis tab. The left column lists the head, or &quot;Title&quot; of each column; the right column describes what&rsquo;s in the data column under the associated title." dir="ltr" border="1" width="100%" frame="hsides" rules="rows" cellpadding="3" cellspacing="0">
+<col width="24%" />
+<col width="*" />
+<thead>
+<tr align="left" valign="top">
+<th align="left" valign="bottom" id="r1c1-t4">Column</th>
+<th align="left" valign="bottom" id="r1c2-t4">Displays</th>
+</tr>
+</thead>
+<tbody>
+<tr align="left" valign="top">
+<td align="left" id="r2c1-t4" headers="r1c1-t4">
+<p>Type</p>
+</td>
+<td align="left" headers="r2c1-t4 r1c2-t4">
+<p>The class name. The icon indicates if this is an array type and if it has multiple Class Loaders..</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r3c1-t4" headers="r1c1-t4">
+<p>Type ID</p>
+</td>
+<td align="left" headers="r3c1-t4 r1c2-t4">
+<p>A numerical identifier for the type.</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r4c1-t4" headers="r1c1-t4">
+<p>Class Loader</p>
+</td>
+<td align="left" headers="r4c1-t4 r1c2-t4">
+<p>The name of the associated class loader instance.</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r5c1-t4" headers="r1c1-t4">
+<p>Class Loader ID</p>
+</td>
+<td align="left" headers="r5c1-t4 r1c2-t4">
+<p>An alpha-numeric identifier for the class loader</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r6c1-t4" headers="r1c1-t4">
+<p>Growth Rate</p>
+</td>
+<td align="left" headers="r6c1-t4 r1c2-t4">
+<p>The increase in amount of memory (in bytes) used by all objects of this type, per second.</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r7c1-t4" headers="r1c1-t4">
+<p>% of Heap</p>
+</td>
+<td align="left" headers="r7c1-t4 r1c2-t4">
+<p>How much of the Java heap is occupied by objects of this type, measured in percentages of the entire heap.</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r8c1-t4" headers="r1c1-t4">
+<p>Count</p>
+</td>
+<td align="left" headers="r8c1-t4 r1c2-t4">
+<p>The number of objects of this type.</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r9c1-t4" headers="r1c1-t4">
+<p>Delta Count</p>
+</td>
+<td align="left" headers="r9c1-t4 r1c2-t4">
+<p>The difference between the current count and the count at the time you reset the delta.</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r10c1-t4" headers="r1c1-t4">
+<p>Size</p>
+</td>
+<td align="left" headers="r10c1-t4 r1c2-t4">
+<p>The amount of memory (in bytes) used by all objects of this type.</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r11c1-t4" headers="r1c1-t4">
+<p>Delta Size</p>
+</td>
+<td align="left" headers="r11c1-t4 r1c2-t4">
+<p>The difference between the current size and the size at the time you reset the delta.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="tblhruleformal" -->
+<!-- Start Footer -->
+<div class="footer">
+<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100%">
+<col width="86%" />
+<col width="*" />
+<tr>
+<td align="left"><span class="copyrightlogo">Copyright&nbsp;&copy;&nbsp;2001, 2011,&nbsp;Oracle&nbsp;and/or&nbsp;its&nbsp;affiliates.&nbsp;All&nbsp;rights&nbsp;reserved.</span><br />
+<a href="./dcommon/html/cpyr.htm"><span class="copyrightlogo">Legal Notices</span></a></td>
+<td align="center"><a href="using002.htm"><img src="./dcommon/gifs/leftnav.gif" alt="Previous" /><br />
+<span class="icon">Previous</span></a>&nbsp;</td>
+<td align="center"><a href="using003.htm"><img src="./dcommon/gifs/rightnav.gif" alt="Next" /><br />
+<span class="icon">Next</span></a></td>
+</tr>
+</table>
+</div>
+<!-- class="footer" --></div>
+</body>
+</html>

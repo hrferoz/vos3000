@@ -50,7 +50,7 @@ service mysql restart
 systemctl restart mysql
 tar xvf apache-tomcat-7.0.100.tar.gz
 \cp -rf apache-tomcat-7.0.100 /home/kunshiweb/base/apache-tomcat
-tar -zxvf jdk-8u151-linux-x64.tar.gz
+#tar -zxvf jdk-8u151-linux-x64.tar.gz
 \cp -rf ./jdk1.8.0_151/ /home/kunshi/base/jdk_default
 \cp -rf ./jdk1.8.0_151/ /home/kunshiweb/base/jdk_default
 tar zxvf audio.tar.gz -C /

@@ -54,8 +54,6 @@ tar xvf apache-tomcat-7.0.100.tar.gz
 \cp -rf ./jdk1.8.0_151/ /home/kunshi/base/jdk_default
 \cp -rf ./jdk1.8.0_151/ /home/kunshiweb/base/jdk_default
 tar zxvf audio.tar.gz -C /
-chkconfig valueaddedd on
-service valueaddedd restart
 rpm -ivh emp-2.1.8-05.noarch.rpm
 rpm -ivh servermonitor-2.1.8-05.i586.rpm
 rpm -ivh vos3000-2.1.8-05.i586.rpm
@@ -69,6 +67,8 @@ rpm -ivh callservice-2.1.8-05.i586.rpm
 rpm -ivh audioplayer-2.1.8-05.i586.rpm
 rpm -ivh mbx3000-2.1.8-05.i586.rpm
 rpm -ivh valueadded-2.1.8-05.i586.rpm
+chkconfig valueaddedd on
+service valueaddedd restart
 \cp -rf VOS3000-client-v2.1.8.05-client.exe /var/www/html
 Nat=$(curl ifconfig.co)
 HOSTIP=$(curl checkip.amazonaws.com)

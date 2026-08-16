@@ -69,7 +69,6 @@ rpm -ivh mbx3000-2.1.8-05.i586.rpm
 rpm -ivh valueadded-2.1.8-05.i586.rpm
 chkconfig valueaddedd on
 service valueaddedd restart
-\cp -rf VOS3000-client-v2.1.8.05-client.exe /var/www/html
 Nat=$(curl ifconfig.co)
 HOSTIP=$(curl checkip.amazonaws.com)
 echo -e "$HOSTIP" >> hostip

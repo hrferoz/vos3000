@@ -17,9 +17,6 @@ ntpdate cn.ntp.org.cn
 
 echo -e "127.0.0.1 www.linknat.com" >> /etc/hosts
 echo -e "127.0.0.1 upgrade.linknat.com" >> /etc/hosts
-echo -e "127.0.0.1 www.aaslinknat.com">>/etc/hosts
-echo -e "127.0.0.1 aaslinknat.com">>/etc/hosts
-echo -e "127.0.0.1 api.seanum.com">>/etc/hosts
 
 yum install -y zip
 yum remove -y perl-DBI mysql mysql-* 

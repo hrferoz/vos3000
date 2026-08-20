@@ -13,18 +13,8 @@ yum install ntp crontabs -y
 rm -rf /etc/localtime
 ln -s /usr/share/zoneinfo/Asia/Dhaka /etc/localtime
 service ntpd stop
-systemctl stop ntpd
-ntpdate us.pool.ntp.org
-hwclock --systohc
-free=$(free -m|awk '{print $2}'|tail -1)
-if  [[ "$free" < "1024" ]];then
-echo "making swap..."
-dd if=/dev/zero of=/mnt/swapfile bs=1M count=8192
-mkswap /mnt/swapfile
-swapon /mnt/swapfile
-echo "set chkconfig"
-echo "/mnt/swapfile          /swap                   swap    defaults        0 0" >> /etc/fstab
-fi
+ntpdate cn.ntp.org.cn
+
 echo -e "127.0.0.1 www.linknat.com" >> /etc/hosts
 echo -e "127.0.0.1 upgrade.linknat.com" >> /etc/hosts
 echo -e "127.0.0.1 www.aaslinknat.com">>/etc/hosts
